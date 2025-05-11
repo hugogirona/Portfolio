@@ -1,0 +1,67 @@
+$mobile: 480px;
+$tablet: 760px;
+$desktop: 1024px;
+$desktop-xl: 1440px;
+$widescreen: 1920px;
+
+// Media Queries mixins
+@mixin mobile {
+  @media (max-width: #{$mobile - 1px}) { @content; }
+}
+
+@mixin tablet {
+  @media (min-width: #{$mobile}) and (max-width: #{$tablet - 1px}) { @content; }
+}
+
+@mixin tablet-up {
+  @media (min-width: #{$tablet}) { @content; }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) and (max-width: #{$desktop-xl - 1px}) { @content; }
+}
+
+@mixin desktop-up {
+  @media (min-width: #{$desktop}) { @content; }
+}
+
+@mixin widescreen {
+  @media (min-width: #{$widescreen}) { @content; }
+}
+
+/*
+Lors de l'utilisation
+.element {
+  font-size: 16px;
+
+  // Mobile : Écrans en dessous de 480px
+  @include mobile {
+    font-size: 14px;
+  }
+
+  // Tablet : Écrans entre 480px et 759px
+  @include tablet {
+    font-size: 15px;
+  }
+
+  // Tablet-up : Écrans à partir de 760px
+  @include tablet-up {
+    font-size: 16px;
+  }
+
+  // Desktop : Écrans entre 1024px et 1439px
+  @include desktop {
+    font-size: 18px;
+  }
+
+  // Desktop-up : Écrans à partir de 1024px
+  @include desktop-up {
+    font-size: 20px;
+  }
+
+  // Widescreen : Écrans à partir de 1920px
+  @include widescreen {
+    font-size: 22px;
+  }
+}
+*/

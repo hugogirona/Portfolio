@@ -1,0 +1,141 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2025-05-09 17:01+0200\n"
+"PO-Revision-Date: 2025-05-09 17:01+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __hepl\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:4
+msgid "Page non trouvée"
+msgstr "Page not found"
+
+#: 404.php:5
+msgid "Désolé, la page que vous recherchez n'existe pas ou a été déplacée."
+msgstr "Sorry, the page you are looking for does not exist or has been moved."
+
+#: 404.php:7
+msgid "Retour à la"
+msgstr "Back to"
+
+#: 404.php:8
+msgid "Retour à la page d'accueil"
+msgstr "Back to home page"
+
+#: 404.php:9
+msgid "page d’accueil"
+msgstr "home page"
+
+#: footer.php:4
+msgid "Navigation secondaire"
+msgstr "Secondary navigation"
+
+#: footer.php:7 template-contact.php:6
+msgid "Coordonnées"
+msgstr "Informations"
+
+#: footer.php:18
+msgid "Navigation"
+msgstr "Navigation"
+
+#: footer.php:33
+msgid "Ressources utiles"
+msgstr "Useful resources"
+
+#: footer.php:48
+msgid "Suivez-moi"
+msgstr "Follow me"
+
+#: front-page.php:19 single-project.php:27
+msgid "Mes derniers projets"
+msgstr "My latest projects"
+
+#: functions.php:163
+msgid "Les types de projet"
+msgstr "Types of project"
+
+#: functions.php:164
+msgid "Type de projet"
+msgstr "Project type"
+
+#: functions.php:172
+msgid "type-de-projet"
+msgstr "project-type"
+
+#: header.php:2
+msgid "fr"
+msgstr "en"
+
+#: header.php:19
+msgid "Se diriger vers la page d’accueil"
+msgstr "Go to the home page"
+
+#: header.php:23
+msgid "Navigation principale"
+msgstr "Primary navigation"
+
+#: template-contact.php:35
+msgid "Informations de contact"
+msgstr "Contact information"
+
+#: template-contact.php:38
+msgid "Nom complet"
+msgstr "Full name"
+
+#: template-contact.php:45
+msgid "ex: John Doe"
+msgstr "ex: John Doe"
+
+#: template-contact.php:54
+msgid "Adresse email"
+msgstr "Email"
+
+#: template-contact.php:61
+msgid "ex: johndoe@email.com"
+msgstr "e.g. johndoe@email.com"
+
+#: template-contact.php:70
+msgid "Sujet"
+msgstr "Subject"
+
+#: template-contact.php:76
+msgid "Un projet, une demande d’information ?"
+msgstr "Do you have a project or a request for information?"
+
+#: template-contact.php:85
+msgid "Message"
+msgstr "Message"
+
+#: template-contact.php:91
+msgid "Écrivez votre message ici"
+msgstr "Write your message here"
+
+#: template-contact.php:100
+msgid "Les champs marqués d’un astérisque"
+msgstr "Fields marked with an asterisk"
+
+#: template-contact.php:100
+msgid "sont obligatoires"
+msgstr "are mandatory"
+
+#: template-contact.php:104
+msgid "Envoyer le message"
+msgstr "Send message"
+
+#: template-projects.php:7
+msgid "Projets"
+msgstr "Projects"
+
+#~ msgid "Vers la page "
+#~ msgstr "Link to "
+
+#~ msgid "Changer la langue en "
+#~ msgstr "Switch language to "

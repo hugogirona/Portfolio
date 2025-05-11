@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="<?= __hepl('fr') ?>">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?= wp_title('·', false, 'right') . get_bloginfo('name') ?></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<?= portfolio_asset('css'); ?>">
+    <script src="<?= portfolio_asset('js') ?>" defer></script>
+    <?php wp_head(); ?>
+</head>
+<body class="the_body">
+<header class="header">
+    <h1 class="screenreader__only">
+        <?= get_the_title() ?>
+    </h1>
+    <a class="nav__logo" href="<?= home_url() ?>" title="<?= __hepl('Se diriger vers la page d’accueil') ?>">
+        <img src="<?= get_field('company_logo', 'option')['url'] ?>" alt="" height="auto" width="48">
+    </a>
+    <nav class="nav">
+        <h2 class="screenreader__only"><?= __hepl('Navigation principale') ?></h2>
+        <ul class="nav__container">
+                <?php foreach (get__option('navigation') as $link) : ?>
+
+                    <li class="nav__item">
+                        <a class="nav__link"
+                           href="<?= esc_url($link['link']['url']) ?>"
+                           target="<?= esc_attr($link['link']['target']) ?>"
+                           title="<?= esc_attr($link['link_title']) ?>"><?= esc_html($link['link']['title']) ?></a>
+                    </li>
+
+                <?php endforeach; ?>
+        </ul>
+
+        <div class="languages">
+            <ul class="languages__container">
+                    <?php foreach (pll_the_languages(['raw' => true]) as $lang): ?>
+                        <?php
+                        $current_lang = pll_current_language();
+                        $language_names = [
+                            'fr' => [
+                                'fr' => 'Français',
+                                'en' => 'Anglais',
+                                'sq' => 'Albanais',
+                            ],
+                            'en' => [
+                                'fr' => 'French',
+                                'en' => 'English',
+                                'sq' => 'Albanian',
+                            ],
+                            'sq' => [
+                                'fr' => 'Frëngjisht',
+                                'en' => 'Anglisht',
+                                'sq' => 'Shqip',
+                            ],
+                        ];
+                        ?>
+                        <li class="languages__item<?= $lang['current_lang'] ? ' languages__item--current' : '' ?>">
+                            <a href="<?= esc_url($lang['url']) ?>"
+                               lang="<?= esc_attr($lang['locale']) ?>"
+                               hreflang="<?= esc_attr($lang['locale']) ?>"
+                               class="languages__link"
+                               title="<?= esc_attr(__('Changer la langue en ', 'hepl-trad') . strtolower($language_names[$current_lang][$lang['slug']])) ?>">
+                                <?= esc_html($lang['slug']) ?>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+        </div>
+    </nav>
+</header>
+<main id="content">

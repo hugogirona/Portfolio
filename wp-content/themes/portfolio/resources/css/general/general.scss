@@ -1,0 +1,43 @@
+/* Style de la page 404 */
+.not-found {
+  text-align: center;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+
+  &__title {
+    font-family: 'Boldonse', sans-serif;
+    color: #d9534f;
+    font-size: 2em;
+  }
+
+  &__message {
+    font-size: 1.1em;
+    color: #333;
+  }
+
+  &__link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.the_body{
+  margin: 0 auto;
+  height: 100vh;
+  max-width: 1800px;
+  font-size: 16px;
+  font-family: 'roboto', sans-serif;
+  color: var(--text-primary);
+  background-color: var(--background);
+}
+

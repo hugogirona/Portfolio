@@ -1,0 +1,15 @@
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__container{
+    display: flex;
+    align-items: center;
+  }
+
+  &__item{
+    margin-right: 1rem;
+  }
+
+}

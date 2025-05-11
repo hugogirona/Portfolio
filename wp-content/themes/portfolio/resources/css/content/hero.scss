@@ -1,0 +1,9 @@
+.hero__name{
+  background: linear-gradient(0.25turn, var(--text-primary), var(--text-primary), var(--oranger), var(--redish));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 200;
+  text-align: center;
+  margin: 6rem auto;
+  line-height: 150%;
+}
