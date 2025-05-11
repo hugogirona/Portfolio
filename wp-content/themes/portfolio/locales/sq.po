@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-05-09 17:01+0200\n"
-"PO-Revision-Date: 2025-05-09 17:01+0200\n"
+"POT-Creation-Date: 2025-05-11 23:14+0200\n"
+"PO-Revision-Date: 2025-05-11 23:14+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sq\n"
@@ -81,6 +81,10 @@ msgstr "Shko te faqja kryesore"
 #: header.php:23
 msgid "Navigation principale"
 msgstr "Navigimi kryesor"
+
+#: template-contact.php:19
+msgid "Formulaire de contact"
+msgstr "Formulari i kontaktit"
 
 #: template-contact.php:35
 msgid "Informations de contact"

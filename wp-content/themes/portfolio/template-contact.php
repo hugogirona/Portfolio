@@ -16,7 +16,7 @@
 
     <section class="contact__right" aria-labelledby="contact-title">
 
-    <h2 id="contact-title">Formulaire de contact</h2>
+    <h2 id="contact-title"><?= __hepl('Formulaire de contact')?></h2>
 
 <?php
 $errors = $_SESSION['contact_form_errors'] ?? [];
