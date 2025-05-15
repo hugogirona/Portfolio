@@ -1,0 +1,51 @@
+
+
+.skills__card{
+
+
+
+  &__container{
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  &__divider{
+    display: flex;
+    gap: 1.25rem;
+    &::before{
+      content: url('../../resources/img/JavaScript.svg');
+      width: 7rem;
+    }
+    &:nth-child(2):before{
+      content: url("../../resources/img/TypeScript.svg");
+
+    }
+    &:nth-child(3):before{
+      content: url("../../resources/img/HTML.svg");
+
+    }
+    &:nth-child(4):before{
+      content: url("../../resources/img/CSS.svg");
+
+    }
+    &:nth-child(5):before{
+      content: url("../../resources/img/PHP.svg");
+    }
+    &:nth-child(6):before{
+      content: url("../../resources/img/MySQL.svg");
+    }
+  }
+
+  &__title{
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    opacity: .7;
+  }
+
+  &__content{
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+}

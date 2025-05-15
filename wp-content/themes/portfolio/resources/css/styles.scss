@@ -1,0 +1,25 @@
+@use 'settings/breackpoints';
+@use 'settings/colors';
+@use 'settings/fonts';
+
+@use 'utils/reset';
+@use 'utils/helpers';
+
+
+@use 'general/general';
+@use 'general/header';
+@use 'general/burger-menu';
+@use 'general/navigation';
+@use 'general/languages';
+@use 'general/footer';
+
+
+@use 'content/hero';
+@use 'content/projects-section';
+@use 'content/project-card';
+@use 'content/presentation-section';
+@use 'content/choose-me';
+@use 'content/skills-display';
+@use 'content/skills-card';
+@use 'content/text-media';
+@use 'content/cta';

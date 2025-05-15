@@ -1,0 +1,29 @@
+@import "../settings/breackpoints";
+
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 1.25rem;
+
+  @include desktop-up {
+
+  }
+
+  @include desktop {
+
+  }
+
+  @include tablet-up {
+
+  }
+
+  @include tablet {
+
+  }
+
+  @include mobile {
+
+  }
+}

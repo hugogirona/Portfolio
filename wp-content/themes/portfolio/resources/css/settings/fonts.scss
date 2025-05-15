@@ -1,0 +1,283 @@
+/* Defined weights:
+  * 100: -
+  * 200: -
+  * 300: light
+  * 400: regular
+  * 500: medium
+  * 600: semi-bold
+  * 700: bold
+  * 800: -
+  * 900: -
+ */
+
+:root {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+}
+
+
+/* Roboto */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Roboto-VariableFont_wdth,wght.ttf') format('TrueType');
+  font-family: 'Roboto';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 900;
+}
+
+/* Roboto */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Roboto-VariableFont_wdth,wght.ttf') format('TrueType');
+  font-family: 'Roboto';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 900;
+}
+/* Roboto */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Roboto-VariableFont_wdth,wght.ttf') format('TrueType');
+  font-family: 'Roboto';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 800;
+}
+/* Roboto */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Roboto-VariableFont_wdth,wght.ttf') format('TrueType');
+  font-family: 'Roboto';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+}
+/* Roboto */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Roboto-VariableFont_wdth,wght.ttf') format('TrueType');
+  font-family: 'Roboto';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 600;
+}
+/* Roboto */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Roboto-VariableFont_wdth,wght.ttf') format('TrueType');
+  font-family: 'Roboto';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+}
+/* Roboto */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Roboto-VariableFont_wdth,wght.ttf') format('TrueType');
+  font-family: 'Roboto';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+/* Roboto */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Roboto-VariableFont_wdth,wght.ttf') format('TrueType');
+  font-family: 'Roboto';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 300;
+}
+
+
+/* Roboto-italic */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Roboto-Italic-VariableFont_wdth,wght.ttf') format('TrueType');
+  font-family: 'Roboto-italic';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 900;
+}
+
+/* Roboto-italic */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Roboto-Italic-VariableFont_wdth,wght.ttf') format('TrueType');
+  font-family: 'Roboto-italic';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 900;
+}
+
+/* Roboto-italic */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Roboto-Italic-VariableFont_wdth,wght.ttf') format('TrueType');
+  font-family: 'Roboto-italic';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 800;
+}
+
+/* Roboto-italic */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Roboto-Italic-VariableFont_wdth,wght.ttf') format('TrueType');
+  font-family: 'Roboto-italic';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* Roboto-italic */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Roboto-Italic-VariableFont_wdth,wght.ttf') format('TrueType');
+  font-family: 'Roboto-italic';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* Roboto-italic */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Roboto-Italic-VariableFont_wdth,wght.ttf') format('TrueType');
+  font-family: 'Roboto-italic';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Roboto-italic */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Roboto-Italic-VariableFont_wdth,wght.ttf') format('TrueType');
+  font-family: 'Roboto-italic';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Roboto-italic */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Roboto-Italic-VariableFont_wdth,wght.ttf') format('TrueType');
+  font-family: 'Roboto-italic';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 300;
+}
+
+
+
+/* Lora */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Lora-VariableFont_wght.ttf') format('TrueType');
+  font-family: 'Lora';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 900;
+}
+
+/* Lora */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Lora-VariableFont_wght.ttf') format('TrueType');
+  font-family: 'Lora';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 800;
+}
+
+/* Lora */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Lora-VariableFont_wght.ttf') format('TrueType');
+  font-family: 'Lora';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* Lora */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Lora-VariableFont_wght.ttf') format('TrueType');
+  font-family: 'Lora';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* Lora */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Lora-VariableFont_wght.ttf') format('TrueType');
+  font-family: 'Lora';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Lora */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Lora-VariableFont_wght.ttf') format('TrueType');
+  font-family: 'Lora';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Lora */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Lora-VariableFont_wght.ttf') format('TrueType');
+  font-family: 'Lora';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 300;
+}
+
+/* Lora-italic */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Lora-Italic-VariableFont_wght.ttf') format('TrueType');
+  font-family: 'Lora-italic';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 900;
+}
+
+/* Lora-italic */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Lora-Italic-VariableFont_wght.ttf') format('TrueType');
+  font-family: 'Lora-italic';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 800;
+}
+
+/* Lora-italic */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Lora-Italic-VariableFont_wght.ttf') format('TrueType');
+  font-family: 'Lora-italic';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* Lora-italic */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Lora-Italic-VariableFont_wght.ttf') format('TrueType');
+  font-family: 'Lora-italic';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* Lora-italic */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Lora-Italic-VariableFont_wght.ttf') format('TrueType');
+  font-family: 'Lora-italic';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Lora-italic */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Lora-Italic-VariableFont_wght.ttf') format('TrueType');
+  font-family: 'Lora-italic';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Lora-italic */
+@font-face {
+  src: url('/wp-content/themes/portfolio/resources/fonts/Lora-Italic-VariableFont_wght.ttf') format('TrueType');
+  font-family: 'Lora-italic';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 300;
+}

@@ -1,0 +1,56 @@
+@import "../settings/breackpoints";
+
+.project-card{
+  max-width: 20.625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  align-self: stretch;
+  border-radius: 10px;
+  border: 1px solid #2E2E2E;
+  background: #1D1D1B;
+  overflow: visible;
+  box-shadow: 0 0 1rem 0 rgba(237, 119, 47, 0.09);
+
+  &__link{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1.5625rem;
+  }
+
+  &__fig{
+
+  }
+
+  &__fig > img{
+    border-radius: .5rem;
+    height: auto;
+    width: 100%;
+    align-self: stretch;
+  }
+
+  &__content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  &__title{
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  &__excerpt{
+    color: #A4A4A4;
+
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+}

@@ -1,0 +1,44 @@
+@import "../settings/breackpoints";
+
+
+.skills{
+
+  &__container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start
+  }
+
+  &__title{
+    font-size: 1.25rem;
+    color: var(--orange);
+    opacity: .5;
+    margin-bottom: 2.5rem;
+    align-self: center;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 4rem;
+
+    &:before{
+      content: '';
+      display: block;
+      width: 1px;
+      height: 6.875rem;
+      background-color: var(--text-secondary);
+      opacity: .2;
+      order: 1;
+      align-self: center;
+
+    }
+  }
+
+  &__cta{
+    align-self: center;
+    margin-top: 1.25rem;
+  }
+}
+
+.cta-above{
+  margin-top: 4rem;
+  align-self: center;
+}
