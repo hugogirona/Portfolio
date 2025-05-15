@@ -1,8 +1,8 @@
 </main>
-<footer>
-    <nav class="footer">
+<footer id="footer">
+    <nav class="footer-menu">
         <h2 class="screenreader__only"><?= __hepl('Navigation secondaire') ?></h2>
-        <ul class="footer__container">
+        <ul class="footer-menu__container">
 
             <li class="footer-menu__title"><?= __hepl('Coordonnées') ?>
                 <ul>
@@ -61,11 +61,17 @@
             </li>
 
         </ul>
-        <div class="copyright__container">
-            <p class="copyright">
+        <div class="footer-menu__legal">
+            <p class="footer-menu__legal__copyright">
                 <?= '© ' . date('Y') . ' ' . get__option('copyrights') ?>
             </p>
+            <a href="<?= get__option('legal_notices')['link']['url'] ?>"
+               title="<?= get__option('legal_notices')['link']['title'] ?>"
+               target="<?= get__option('legal_notices')['link']['target'] ?>"
+               class="footer-menu__legal__legal-notices footer-menu__link"><?= get__option('legal_notices')['label'] ?></a>
         </div>
+
+
 </footer>
 
 </body>

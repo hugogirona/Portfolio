@@ -1,3 +1,6 @@
+@import "../settings/breackpoints";
+
+
 /* Style de la page 404 */
 .not-found {
   text-align: center;
@@ -31,13 +34,99 @@
   }
 }
 
-.the_body{
-  margin: 0 auto;
-  height: 100vh;
-  max-width: 1800px;
+html, body {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
   font-size: 16px;
-  font-family: 'roboto', sans-serif;
   color: var(--text-primary);
-  background-color: var(--background);
+  background-color: var(--background-color);
+  margin: 0 auto;
+  min-height: 100%;
+  max-width: 1800px;
+  min-width: 320px;
+
+  @include mobile {
+    font-size: 14px;
+  }
+
+  &:has(.nav__checkbox:checked) {
+    overflow: hidden;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    background-image: url('../../resources/img/night_sky.jpeg');
+    background-repeat: repeat;
+    background-size: 150% 20%;
+    background-position: center;
+    opacity: 0.2;
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+#content{
+  overflow: hidden;
+
+  @include desktop-up {
+
+  }
+
+  @include desktop {
+
+  }
+
+  @include tablet-up {
+
+  }
+
+  @include tablet {
+  }
+
+  @include mobile {
+  }
+}
+
+#footer{
+  @include desktop-up {
+
+  }
+
+  @include desktop {
+
+  }
+
+  @include tablet-up {
+
+  }
+
+  @include tablet {
+    padding: 1.25rem;
+  }
+
+  @include mobile {
+    padding: 1.25rem;
+
+  }
+}
+
+.section {
+
+  @include tablet {
+    padding: 0 1.25rem;
+  }
+
+  @include mobile {
+    padding: 0 1.25rem;
+
+  }
 }
 

@@ -33,4 +33,5 @@ export default defineConfig({
         assetsInlineLimit: 0,
         target: ["es2015"], // Rendre compatible le JAVASCRIPT
     },
+
 });

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-05-11 23:14+0200\n"
-"PO-Revision-Date: 2025-05-11 23:14+0200\n"
+"POT-Creation-Date: 2025-05-14 16:56+0200\n"
+"PO-Revision-Date: 2025-05-14 16:56+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_GB\n"
@@ -54,9 +54,13 @@ msgstr "Useful resources"
 msgid "Suivez-moi"
 msgstr "Follow me"
 
-#: front-page.php:19 single-project.php:27
-msgid "Mes derniers projets"
-msgstr "My latest projects"
+#: front-page.php:50
+msgid "Mes derniers "
+msgstr "My latest "
+
+#: front-page.php:53
+msgid "projets"
+msgstr "projects"
 
 #: functions.php:163
 msgid "Les types de projet"
@@ -74,13 +78,25 @@ msgstr "project-type"
 msgid "fr"
 msgstr "en"
 
-#: header.php:19
+#: header.php:26
 msgid "Se diriger vers la page d’accueil"
 msgstr "Go to the home page"
 
-#: header.php:23
+#: header.php:34
 msgid "Navigation principale"
 msgstr "Primary navigation"
+
+#: header.php:37
+msgid "Ouvrir le menu"
+msgstr "Open the menu"
+
+#: header.php:82
+msgid "Changer la langue en "
+msgstr "Switch language to "
+
+#: single-project.php:27
+msgid "Mes derniers projets"
+msgstr "My latest projects"
 
 #: template-contact.php:19
 msgid "Formulaire de contact"
@@ -138,8 +154,6 @@ msgstr "Send message"
 msgid "Projets"
 msgstr "Projects"
 
-#~ msgid "Vers la page "
-#~ msgstr "Link to "
-
-#~ msgid "Changer la langue en "
-#~ msgstr "Switch language to "
+#: templates/content/project-card/project-card.php:2
+msgid "Vers mon projet "
+msgstr "To my project "

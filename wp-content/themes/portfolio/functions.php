@@ -316,3 +316,5 @@ function responsive_image($image, $settings): bool|string
     <?php
     return ob_get_clean();
 }
+
+add_filter('show_admin_bar', '__return_false');

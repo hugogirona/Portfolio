@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-05-11 23:14+0200\n"
-"PO-Revision-Date: 2025-05-11 23:14+0200\n"
+"POT-Creation-Date: 2025-05-14 16:57+0200\n"
+"PO-Revision-Date: 2025-05-14 17:23+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sq\n"
@@ -54,9 +54,13 @@ msgstr "Burime të dobishme"
 msgid "Suivez-moi"
 msgstr "Më ndiq"
 
-#: front-page.php:19 single-project.php:27
-msgid "Mes derniers projets"
-msgstr "Projektet e fundit"
+#: front-page.php:50
+msgid "Mes derniers "
+msgstr "Projektet"
+
+#: front-page.php:53
+msgid "projets"
+msgstr "e fundit "
 
 #: functions.php:163
 msgid "Les types de projet"
@@ -74,13 +78,25 @@ msgstr "lloji-i-projektit"
 msgid "fr"
 msgstr "sq"
 
-#: header.php:19
+#: header.php:26
 msgid "Se diriger vers la page d’accueil"
 msgstr "Shko te faqja kryesore"
 
-#: header.php:23
+#: header.php:34
 msgid "Navigation principale"
 msgstr "Navigimi kryesor"
+
+#: header.php:37
+msgid "Ouvrir le menu"
+msgstr "Hap menynë"
+
+#: header.php:82
+msgid "Changer la langue en "
+msgstr "Ndrysho gjuhën në "
+
+#: single-project.php:27
+msgid "Mes derniers projets"
+msgstr "Projektet e fundit"
 
 #: template-contact.php:19
 msgid "Formulaire de contact"
@@ -138,8 +154,6 @@ msgstr "Dërgo mesazhin"
 msgid "Projets"
 msgstr "Projekte"
 
-#~ msgid "Vers la page "
-#~ msgstr "Për në faqe "
-
-#~ msgid "Changer la langue en "
-#~ msgstr "Ndrysho gjuhën në "
+#: templates/content/project-card/project-card.php:2
+msgid "Vers mon projet "
+msgstr "Drejt projektit tim "

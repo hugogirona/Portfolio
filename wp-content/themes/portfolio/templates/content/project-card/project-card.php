@@ -1,10 +1,10 @@
 <article class="project-card">
-    <a href="<?= esc_url(get_permalink()); ?>" class="project-card__link">
+    <a href="<?= esc_url(get_permalink()); ?>" class="project-card__link" title="<?= __hepl("Vers mon projet ") . esc_attr(get_the_title()); ?>">
 
         <?php if (has_post_thumbnail()) : ?>
-            <div class="project-card__image">
+            <figure class="project-card__fig">
                 <?= get_the_post_thumbnail(null, 'medium'); ?>
-            </div>
+            </figure>
         <?php endif; ?>
 
         <div class="project-card__content">

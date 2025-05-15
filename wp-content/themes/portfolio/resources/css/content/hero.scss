@@ -1,9 +1,85 @@
-.hero__name{
-  background: linear-gradient(0.25turn, var(--text-primary), var(--text-primary), var(--oranger), var(--redish));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 200;
-  text-align: center;
-  margin: 6rem auto;
-  line-height: 150%;
+@import "../settings/breackpoints";
+
+.hero {
+  margin: 0 8.8%;
+  display: flex;
+  flex-direction: column;
+
+  &__svg--sun{
+    align-self: flex-end;
+    transform: translateY(3rem);
+    z-index: -1;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+
+    &--first {
+      font-family: 'Lora-italic', 'Georgia', serif;
+      font-size: 4rem;
+      line-height: .8;
+    }
+
+
+     &--second{
+       align-self: flex-end;
+       font-size: 6rem;
+       font-weight: 800;
+       line-height: .8;
+    }
+  }
+
+  &__name {
+
+    &__container {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    display: inline-block;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 200;
+    text-align: right;
+    background: linear-gradient(0.25turn, var(--text-primary), var(--oranger));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+
+    @include desktop-up {
+
+    }
+
+    @include desktop {
+
+    }
+
+    @include tablet-up {
+
+    }
+
+    @include tablet {
+
+    }
+
+    @include mobile {
+
+    }
+  }
+
+  &__quote{
+    font-size: 0.8125rem;
+    line-height: 1.4;
+    color: var(--text-secondary);
+    max-width: 300px;
+    margin-top: 1.125rem;
+    margin-bottom: 2.5rem;
+  }
+
+  &__cta {
+    display: inline-block;
+    align-self: flex-end;
+  }
 }
