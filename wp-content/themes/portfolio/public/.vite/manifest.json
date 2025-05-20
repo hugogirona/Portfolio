@@ -1,6 +1,6 @@
 {
   "wp-content/themes/portfolio/resources/css/styles.scss": {
-    "file": "assets/css-CGMA_Hgb.css",
+    "file": "assets/css-CaeyTtXn.css",
     "src": "wp-content/themes/portfolio/resources/css/styles.scss",
     "isEntry": true
   },
@@ -44,6 +44,10 @@
     "file": "assets/TypeScript-1G6Xd-T3.svg",
     "src": "wp-content/themes/portfolio/resources/img/TypeScript.svg"
   },
+  "wp-content/themes/portfolio/resources/img/arrow.svg": {
+    "file": "assets/arrow-C894Pcz0.svg",
+    "src": "wp-content/themes/portfolio/resources/img/arrow.svg"
+  },
   "wp-content/themes/portfolio/resources/img/black-hole.svg": {
     "file": "assets/black-hole-C3XkH4dp.svg",
     "src": "wp-content/themes/portfolio/resources/img/black-hole.svg"
@@ -56,12 +60,16 @@
     "file": "assets/night_sky-CLalSPDN.jpeg",
     "src": "wp-content/themes/portfolio/resources/img/night_sky.jpeg"
   },
+  "wp-content/themes/portfolio/resources/img/spaceship.svg": {
+    "file": "assets/spaceship-ClqyFlRM.svg",
+    "src": "wp-content/themes/portfolio/resources/img/spaceship.svg"
+  },
   "wp-content/themes/portfolio/resources/img/wheel.svg": {
     "file": "assets/wheel-BNHXdR_c.svg",
     "src": "wp-content/themes/portfolio/resources/img/wheel.svg"
   },
   "wp-content/themes/portfolio/resources/js/main.js": {
-    "file": "assets/js-l0sNRNKZ.js",
+    "file": "assets/js-Bfic_udk.js",
     "name": "js",
     "src": "wp-content/themes/portfolio/resources/js/main.js",
     "isEntry": true

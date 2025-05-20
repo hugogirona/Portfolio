@@ -1,0 +1,58 @@
+@import "../settings/breackpoints";
+
+
+
+.contact {
+  display: flex;
+  justify-content: center;
+  gap: 9rem;
+
+  @include mobile{
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+
+  @include tablet{
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+
+
+  &__headline{
+    font-family: 'Lora-italic', 'Georgia', serif;
+    font-size: 2.5em;
+    padding: 0 1.25rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.form__wrapper{
+    flex-grow: 2;
+    max-width: 39.5rem;
+}
+
+.info{
+
+  &__wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    & ul{
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+  }
+
+
+  &__title{
+    font-size: 1.25rem;
+    color: var(--orange);
+    opacity: .5;
+  }
+
+  &__item{
+    color: var(--text-secondary);
+  }
+}

@@ -8,22 +8,18 @@
   padding: 1.25rem;
 
   @include desktop-up {
-
+    padding: 2rem 4rem;
   }
 
   @include desktop {
-
-  }
-
-  @include tablet-up {
-
+    padding: 2rem 4rem;
   }
 
   @include tablet {
-
+    padding: 1.25rem;
   }
 
   @include mobile {
-
+    padding: 1.25rem;
   }
 }

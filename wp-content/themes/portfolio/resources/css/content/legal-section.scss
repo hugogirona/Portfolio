@@ -1,0 +1,16 @@
+@import "../settings/breackpoints";
+
+.legal{
+
+  &__container{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem
+  }
+
+  &__title{
+    font-family: 'Lora-italic', 'Georgia', serif;
+    font-size: 3.5em;;
+  }
+}
+

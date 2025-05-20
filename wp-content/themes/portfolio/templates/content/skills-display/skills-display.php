@@ -25,7 +25,7 @@ $cta = get_sub_field('cta');
             <a href="<?=esc_url($cta['cta_link']['url'])?>"
                title="<?=esc_attr($cta['cta_link']['title'])?>"
                target="<?=esc_attr($cta['cta_link']['target'])?>"
-               class="cta skills__cta"><?= esc_html($cta['cta_content'])?></a>
+               class="cta cta--right skills__cta"><?= esc_html($cta['cta_content'])?></a>
         <?php endif; ?>
     </div>
 </section>

@@ -39,14 +39,21 @@ html, body {
   position: relative;
 }
 
+.wrapper{
+  max-width: 1920px;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
 body {
   font-size: 16px;
   color: var(--text-primary);
   background-color: var(--background-color);
   margin: 0 auto;
   min-height: 100%;
-  max-width: 1800px;
   min-width: 320px;
+  overflow-x: hidden;
+
 
   @include mobile {
     font-size: 14px;
@@ -73,60 +80,58 @@ body {
   }
 }
 
-#content{
-  overflow: hidden;
-
-  @include desktop-up {
-
-  }
-
-  @include desktop {
-
-  }
-
-  @include tablet-up {
-
-  }
-
-  @include tablet {
-  }
-
-  @include mobile {
-  }
-}
 
 #footer{
-  @include desktop-up {
-
-  }
-
-  @include desktop {
-
-  }
-
-  @include tablet-up {
-
-  }
-
-  @include tablet {
-    padding: 1.25rem;
-  }
+  position: relative;
+  overflow: hidden;
 
   @include mobile {
-    padding: 1.25rem;
+    &::after{
+      position: absolute;
+      content: '';
+      width: 180vw;
+      height: 7.5rem;
+      flex-shrink: 0;
+      border-radius: 180vw;
+      background: radial-gradient(50% 50% at 50% 50%,
+              var(--Colors-Orange-2, rgba(237, 119, 47, 0.51)) 0%,
+              var(--Colors-Beige, rgba(175, 173, 150, 0.51)) 74.99%,
+              var(--Colors-Orange, rgba(242, 147, 55, 0.51)) 83.17%,
+              var(--Colors-Orange-3, rgba(237, 100, 45, 0.51)) 100%);
+      filter: blur(75px);
 
+    }
   }
 }
 
 .section {
 
+  padding: 0 14%;
+
+  @include mobile {
+    padding: 2.5rem 1.25rem 5rem;
+  }
+}
+
+.aside {
+  @include desktop-up {
+    padding: 0 6.4%;
+  }
+
+  @include desktop {
+    padding: 0 6.4%;
+  }
+
+  @include tablet-up {
+    padding: 0 6.4%;
+  }
+
   @include tablet {
-    padding: 0 1.25rem;
+    padding: 0 6.4%;
   }
 
   @include mobile {
     padding: 0 1.25rem;
-
   }
 }
 

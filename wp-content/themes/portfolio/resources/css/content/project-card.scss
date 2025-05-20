@@ -1,56 +1,83 @@
 @import "../settings/breackpoints";
 
-.project-card{
-  max-width: 20.625rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1.25rem;
-  align-self: stretch;
+.project-card {
+  position: relative;
+  max-width: 18rem;
   border-radius: 10px;
   border: 1px solid #2E2E2E;
   background: #1D1D1B;
   overflow: visible;
-  box-shadow: 0 0 1rem 0 rgba(237, 119, 47, 0.09);
+  transition: 0.3s ease;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.5625rem;
 
-  &__link{
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    padding: 1.5625rem;
+  &:hover, &:focus-visible {
+    box-shadow: 0 0 1rem 0 rgba(237, 119, 47, 0.1);
+    transform: scale(1.08);
+
+    & img {
+      filter: saturate(1);
+    }
+
+    & .project-card__content, & .project-card__title {
+      opacity: 1;
+
+    }
   }
 
-  &__fig{
 
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
   }
 
-  &__fig > img{
+  &__fig > img {
     border-radius: .5rem;
     height: auto;
     width: 100%;
     align-self: stretch;
+    filter: saturate(0);
+    transition: filter 0.3s ease;
+
+    @include mobile {
+      filter: saturate(1);
+    }
+
+    @include tablet {
+      filter: saturate(1);
+    }
   }
 
-  &__content{
+  &__content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
   }
 
-  &__title{
-    color: #FFF;
+  &__title {
+    color: var(--text-primary);
     font-size: 20px;
-    font-style: normal;
     font-weight: 500;
-    line-height: normal;
+
+    @include tablet-up {
+      opacity: .7;
+    }
   }
 
-  &__excerpt{
+  &__excerpt {
     color: #A4A4A4;
-
     font-style: normal;
     font-weight: 300;
-    line-height: normal;
+    line-height: 1.5;
+
+    @include tablet-up {
+      opacity: .7;
+    }
   }
 }

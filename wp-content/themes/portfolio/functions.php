@@ -153,10 +153,10 @@ register_post_type('project', [
     'supports' => ['title', 'excerpt', 'thumbnail'],
 ]);
 
-add_filter('pll_get_post_types', function ($types) {
-    $types['project'] = true;
-    return $types;
-});
+//add_filter('pll_get_post_types', function ($types) {
+//    $types['project'] = true;
+//    return $types;
+//});
 
 register_taxonomy('project_type', ['project'], [
     'labels' => [

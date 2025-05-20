@@ -1,21 +1,22 @@
 @import "../settings/breackpoints";
 
 
-
 .paragraphs-list {
-  position: relative; // ⚠️ important pour positionner le ::before à l’intérieur
+  position: relative;
+  max-height: 62.5rem;
+  overflow: hidden;
+  padding-top: 5rem;
 
 
-
-
-  // assure que les enfants passent AU-DESSUS du ::before
   &__container {
-    position: relative;
+    position: sticky;
     z-index: 1;
     display: flex;
     flex-direction: column;
-    gap: 30rem;
-    max-width: 400px;
+    align-items: center;
+    height: 100vh;
+    gap: 25rem;
+    max-width: 420px;
     margin: 0 auto;
   }
 
@@ -28,43 +29,32 @@
     z-index: 1;
     display: flex;
     flex-direction: column;
-    margin-bottom: 8rem;
+    align-items: center;
+    gap: 1rem;
+
+    @include tablet-up {
+      font-size: 1.5rem;
+    }
 
     &::before {
       content: '';
-      position: absolute;
-      left: 50%;
-      width: 140vw;
-      height: 800px;
-      transform: translate(-50%, 4rem);
-      background-image: url('../../resources/img/wheel.svg'); // ton SVG
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      z-index: 0;
+      background: url('../../resources/img/wheel.svg') no-repeat center/contain;
+      translate: 0 10rem;
       pointer-events: none;
-    }
-
-    &::after{
-      content: '';
-      display: block;
-      width: 1px;
-      height: 4rem;
-      margin-top: 1.5rem;
-      background-color: var(--text-secondary);
-      opacity: .2;
-      order: 1;
-      align-self: center;
+      position: absolute;
+      width: 50rem;
+      height: 50rem;
+      animation: rotate 10s linear infinite reverse;
+      z-index: 1;
     }
   }
 }
 
 .paragraph {
 
-  flex: 0 0 110%; // largeur visible par slide
-  scroll-snap-align: start;
+  flex: 0 0 100%;
+  scroll-snap-align: center; // ou start
   scroll-snap-stop: always;
-  border-radius: 1rem;
 
 
   &__container {
@@ -72,14 +62,16 @@
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    scroll-padding-left: 1rem;
     -webkit-overflow-scrolling: touch;
-    gap: 1rem;
-    transform: translateY(-18.5rem);
-    max-width: 80%;
+    gap: 3.5rem;
+    transform: translateY(5rem);
+    max-width: 90%;
     padding-inline: 1rem;
     align-self: center;
+    z-index: 2;
 
-    // Cacher la scrollbar
+     //Cacher la scrollbar
     scrollbar-width: none; // Firefox
     -ms-overflow-style: none; // Internet Explorer 10+
 
@@ -93,6 +85,7 @@
     font-size: 1.25rem;
     color: var(--orange);
     opacity: .5;
+    margin-bottom: .5rem;
   }
 
   &__content {
@@ -100,3 +93,14 @@
     line-height: 1.5;
   }
 }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

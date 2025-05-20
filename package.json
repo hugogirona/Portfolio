@@ -36,5 +36,8 @@
     "Chrome >= 50",
     "Android >= 4.4",
     "Safari >= 9"
-  ]
+  ],
+  "dependencies": {
+    "gsap": "^3.13.0"
+  }
 }

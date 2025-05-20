@@ -1,0 +1,52 @@
+@import "../settings/breackpoints";
+
+.gallery {
+  padding-block: 4rem;
+  max-width: 70rem;
+  margin: 0 auto;
+
+  &__title {
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 2rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // 3 images côte à côte
+    gap: 2rem;
+
+    @include tablet{
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.05);
+  }
+
+  &__item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__caption {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-align: center;
+    padding: 0.5rem 1rem;
+  }
+}

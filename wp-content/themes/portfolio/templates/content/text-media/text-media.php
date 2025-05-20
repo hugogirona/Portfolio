@@ -6,31 +6,41 @@
 <?php $media_position = get_sub_field('media_position') ?>
 <?php $media_type = get_sub_field('media_type') ?>
 
-<section class="text-media">
-    <div class="text-media__content-container">
-        <h2 class="text-media__content-headline">
+<article class="text-media">
+    <div class="text-media__divider">
+
+        <h3 class="text-media__headline">
             <?= $headline ?>
-        </h2>
+        </h3>
 
-        <div class="text-media__content-text">
-            <?= $first_text ?>
-        </div>
+        <div class="text-media__content">
 
-        <?php if ($second_text || $second_text === 0): ?>
-        <div class="text-media__content-text">
-            <?= $second_text ?>
+
+
+            <?php if ($first_text || $first_text === 0): ?>
+                <p class="text-media__content__text">
+                    <?= $first_text ?>
+                </p>
+            <?php endif; ?>
+
+
+
+            <?php if ($second_text || $second_text === 0): ?>
+                <p class="text-media__content__text">
+                    <?= $second_text ?>
+                </p>
+            <?php endif; ?>
         </div>
-        <?php endif; ?>
 
         <?php if ($cta || $cta === 0): ?>
-        <a class="text-media__content-link"
-           href="<?= $cta['url'] ?>"
-           title="<?= $cta['title'] ?>">
-            <?= $cta['title'] ?>
-        </a>
+            <a class="text-media__link"
+               href="<?= $cta['url'] ?>"
+               title="<?= $cta['title'] ?>">
+                <?= $cta['title'] ?>
+            </a>
         <?php endif; ?>
-
     </div>
+
     <div class="text-media__position text-media__position--<?= $media_position ?>">
         <img class="text-media__image"
              src="<?= $image['url'] ?>"
@@ -38,4 +48,4 @@
              width="<?= $image['width'] ?>"
              height="<?= $image['height'] ?>">
     </div>
-</section>
+</article>
