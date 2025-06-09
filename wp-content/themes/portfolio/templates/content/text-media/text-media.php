@@ -1,10 +1,11 @@
 <?php $headline = get_sub_field('title') ?>
 <?php $first_text = get_sub_field('first_text') ?>
 <?php $second_text = get_sub_field('second_text') ?>
-<?php $cta = get_sub_field('cta') ?>
+<?php $ctas = get_sub_field('cta') ?>
 <?php $image = get_sub_field('project_image') ?>
 <?php $media_position = get_sub_field('media_position') ?>
 <?php $media_type = get_sub_field('media_type') ?>
+
 
 <article class="text-media">
     <div class="text-media__divider">
@@ -14,7 +15,6 @@
         </h3>
 
         <div class="text-media__content">
-
 
 
             <?php if ($first_text || $first_text === 0): ?>
@@ -32,12 +32,18 @@
             <?php endif; ?>
         </div>
 
-        <?php if ($cta || $cta === 0): ?>
-            <a class="text-media__link"
-               href="<?= $cta['url'] ?>"
-               title="<?= $cta['title'] ?>">
-                <?= $cta['title'] ?>
-            </a>
+
+        <?php if ($ctas): ?>
+            <div class="text-media__cta-divider">
+                <?php foreach ($ctas as $cta): ?>
+                <a class="text-media__link"
+                   href="<?= esc_url($cta['link']['url']) ?>"
+                   title="<?= esc_attr($cta['link']['title']) ?>"
+                   target="<?= esc_attr($cta['link']['target'] ? : '_self') ?>">
+                    <?= esc_html($cta['label']) ?>
+                </a>
+                <?php endforeach; ?>
+            </div>
         <?php endif; ?>
     </div>
 

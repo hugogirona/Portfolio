@@ -9,21 +9,36 @@
   padding-top: 4.375rem;
   padding-bottom: 7.75rem;
 
-  @include tablet {
-    gap: 3.75rem;
-    padding: 7rem 1.25rem;
-  }
 
-  @include mobile {
-    gap: 3.75rem;
-    padding: 7rem 1.25rem;
+  @include tablet {
+    gap: 2rem;
+    padding: 4rem 1.25rem;
 
     &::before {
       position: absolute;
       content: '';
       width: calc(100vw - 2.5rem);
-      height: 800px;
-      transform: translate(0, -10rem);
+      height: 300px;
+      transform: translate(0, -7rem);
+      background-image: url('../../resources/img/black-hole.svg'); // ton SVG
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: top;
+      z-index: -1;
+      pointer-events: none;
+    }
+  }
+
+  @include mobile {
+    gap: 2rem;
+    padding: 4rem 1.25rem;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: calc(100vw - 2.5rem);
+      height: 300px;
+      transform: translate(0, -7rem);
       background-image: url('../../resources/img/black-hole.svg'); // ton SVG
       background-size: contain;
       background-repeat: no-repeat;
@@ -40,16 +55,18 @@
     flex-wrap: wrap;
     gap: 3.75rem;
     margin: 4.375rem 0;
-    padding: 0 10%;
+    padding: 0 14%;
 
     @include tablet {
       flex-direction: column;
-      gap: 3.75rem
+      gap: 3.75rem;
+      padding: 0;
     }
 
     @include mobile {
       flex-direction: column;
-      gap: 3.75rem
+      gap: 3.75rem;
+      padding: 0;
     }
   }
 
@@ -77,10 +94,12 @@
   }
 
   &__link {
-    transition: border-bottom 0.3s ease;
+    transition: border-bottom 0.1s linear;
+    border-bottom: 1px solid transparent;
+    animation-fill-mode: forwards;
 
     &:hover {
-      border-bottom: 1px solid var(--text-secondary);
+      border-bottom: 1px solid var(--text-primary);
     }
   }
 
@@ -93,28 +112,18 @@
       align-self: flex-start;
     }
 
-    @include desktop-up {
-
-    }
-
-    @include desktop {
-
-    }
-
-    @include tablet-up {
-
-    }
-
     @include tablet {
       flex-direction: column;
       gap: 1rem;
       font-size: 0.75rem;
+      padding: 0;
     }
 
     @include mobile {
       flex-direction: column;
       gap: 1rem;
       font-size: 0.75rem;
+      padding: 0;
     }
   }
 }

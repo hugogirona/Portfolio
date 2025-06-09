@@ -44,8 +44,8 @@ get_header(); ?>
         </svg>
 
         <h2 class="hero__title">
-            <i class="hero__title--first"><?= get_field('first_title') ?> </i>
-            <i class="hero__title--second"><?= get_field('second_title') ?></i>
+            <i class="hero__title--first"><span><?= get_field('first_title') ?> </span></i>
+            <i class="hero__title--second"><span><?= get_field('second_title') ?></span></i>
         </h2>
 
         <div class="hero__name__container">
@@ -60,7 +60,7 @@ get_header(); ?>
         <a class="cta cta--left hero__cta"
            href="<?= esc_url($first_cta['cta_link']['url']) ?>"
            title="<?= esc_attr($first_cta['cta_link']['title']) ?>"
-           target="<?= esc_attr($first_cta['cta_link']['target']) ?>"><?= esc_html($first_cta['cta_text']) ?></a>
+           target="<?= esc_attr($first_cta['cta_link']['target'] ? $first_cta['cta_link']['target']: '_self') ?>"><?= esc_html($first_cta['cta_text']) ?></a>
     </section>
 
     <section class="section projects">
@@ -96,9 +96,9 @@ get_header(); ?>
             </div>
 
             <a class="cta cta--right projects__cta--home"
-               href="<?= $second_cta['cta_link']['url'] ?>"
-               title="<?= $second_cta['cta_link']['title'] ?>"
-               target="<?= $second_cta['cta_link']['target'] ?>"><?= $second_cta['cta_text'] ?></a>
+               href="<?= esc_url($second_cta['cta_link']['url']) ?>"
+               title="<?= esc_attr($second_cta['cta_link']['title']) ?>"
+               target="<?= esc_attr($second_cta['cta_link']['target'] ? $second_cta['cta_link']['target']: '_self') ?>"><?= esc_html($second_cta['cta_text']) ?></a>
         </div>
     </section>
 

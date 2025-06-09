@@ -3,6 +3,7 @@
 .project-card {
   position: relative;
   max-width: 18rem;
+  min-height: 20rem;
   border-radius: 10px;
   border: 1px solid #2E2E2E;
   background: #1D1D1B;
@@ -11,20 +12,6 @@
   flex-direction: column;
   gap: 1.25rem;
   padding: 1.5625rem;
-
-  &:hover, &:focus-visible {
-    box-shadow: 0 0 1rem 0 rgba(237, 119, 47, 0.1);
-    transform: scale(1.08);
-
-    & img {
-      filter: saturate(1);
-    }
-
-    & .project-card__content, & .project-card__title {
-      opacity: 1;
-
-    }
-  }
 
 
   &__link {
@@ -36,12 +23,15 @@
     z-index: 1;
   }
 
+  &__fig{
+    margin-bottom: 1rem;
+  }
+
   &__fig > img {
-    border-radius: .5rem;
+    border-radius: .3rem;
     height: auto;
     width: 100%;
     align-self: stretch;
-    filter: saturate(0);
     transition: filter 0.3s ease;
 
     @include mobile {
@@ -64,10 +54,6 @@
     color: var(--text-primary);
     font-size: 20px;
     font-weight: 500;
-
-    @include tablet-up {
-      opacity: .7;
-    }
   }
 
   &__excerpt {
@@ -75,9 +61,30 @@
     font-style: normal;
     font-weight: 300;
     line-height: 1.5;
+  }
+}
 
-    @include tablet-up {
+.projects__grid:has(.project-card:hover) {
+  .project-card:hover{
+    box-shadow: 0 0 1rem 0 rgba(237, 119, 47, 0.1);
+    transform: scale(1.03);
+
+    .project-card__title, .project-card__excerpt{
+      opacity: 1;
+    }
+
+    .project-card__fig > img {
+      filter: saturate(1);
+    }
+  }
+
+  .project-card{
+    &__title, &__excerpt{
       opacity: .7;
+    }
+
+    &__fig > img {
+      filter: saturate(0);
     }
   }
 }

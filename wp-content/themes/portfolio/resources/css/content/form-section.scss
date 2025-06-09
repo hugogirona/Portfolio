@@ -1,44 +1,67 @@
 @import "../settings/breackpoints";
 
 
-
 .contact {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   gap: 9rem;
 
-  @include mobile{
+  @include mobile {
     flex-direction: column-reverse;
     gap: 2rem;
   }
 
-  @include tablet{
+  @include tablet {
     flex-direction: column-reverse;
     gap: 2rem;
   }
 
 
-  &__headline{
+  &__headline {
     font-family: 'Lora-italic', 'Georgia', serif;
     font-size: 2.5em;
-    padding: 0 1.25rem;
-    margin-bottom: 3rem;
+    padding: 0 14%;
+    margin-bottom: 7.5rem;
+
+    @include tablet-up {
+      font-size: 4rem;
+    }
+
+    @include mobile {
+      padding: 2.5rem 1.25rem .5rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__success{
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    margin-top: 2rem;
   }
 }
 
-.form__wrapper{
-    flex-grow: 2;
-    max-width: 39.5rem;
+.form__wrapper {
+  flex-grow: 2;
+  max-width: 39.5rem;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+
+  @include tablet-up {
+    order: -1;
+  }
 }
 
-.info{
+.info {
 
-  &__wrapper{
+  &__wrapper {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
 
-    & ul{
+
+    & ul {
       display: flex;
       flex-direction: column;
       gap: 1.25rem;
@@ -46,13 +69,13 @@
   }
 
 
-  &__title{
+  &__title {
     font-size: 1.25rem;
     color: var(--orange);
     opacity: .5;
   }
 
-  &__item{
+  &__item {
     color: var(--text-secondary);
   }
 }

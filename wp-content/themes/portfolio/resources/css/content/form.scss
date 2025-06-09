@@ -8,6 +8,17 @@
   gap: 2rem;
 
 
+  @include tablet-up {
+    min-width: 30rem;
+  }
+
+  @include tablet {
+    width: calc(100% - 2.5rem);
+  }
+
+
+
+
 
   & label {
     font-size: 1rem;

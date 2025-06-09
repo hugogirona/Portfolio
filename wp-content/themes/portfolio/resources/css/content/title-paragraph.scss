@@ -1,7 +1,17 @@
 @import "../settings/breackpoints";
 
 .presentation {
-  margin-top: 4rem;
+
+  &__title {
+    margin-bottom: 2.5rem;
+    font-family: 'Lora-italic', 'Georgia', serif;
+    font-size: 2.5rem;
+
+    @include tablet-up {
+      font-size: 4rem;
+      margin-bottom: 7.5rem;
+    }
+  }
 }
 
 .title-paragraph {
@@ -10,7 +20,6 @@
   gap: 1rem;
   margin-bottom: 1.5rem;
   max-width: 39rem;
-
 
   &:before {
     content: '';
@@ -22,6 +31,23 @@
     order: 1;
     align-self: center;
   }
+
+  &--right {
+    align-self: flex-end;
+    margin-bottom: 6.75rem;
+    &:before {
+      content: none;
+    }
+  }
+
+  &--left {
+    align-self: flex-start;
+    margin-bottom: 6.75rem;
+    &:before {
+      content: none;
+    }
+  }
+
 
   &__container {
     display: flex;

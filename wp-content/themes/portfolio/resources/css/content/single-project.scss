@@ -9,11 +9,13 @@
   &__title{
     font-family: 'Lora-italic', 'Georgia', serif;
     font-size: 2.5em;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
 
 
     @include tablet-up{
-      font-size: 8em;
+      font-size: 4em;
+      margin-bottom: 7.5rem;
+
     }
   }
 

@@ -32,7 +32,8 @@
                 </div>
             <?php endif; ?>
 
-            <form action="" method="post" novalidate class="form">
+            <form action="<?= esc_url(admin_url('admin-post.php')); ?>" method="post" novalidate class="form">
+
                 <fieldset class="form__field">
                     <legend class="screenreader__only"><?= __hepl('Informations de contact') ?></legend>
 
@@ -104,6 +105,7 @@
                             class="ast">*</span>) <?= __hepl('sont obligatoires') ?></p>
 
                 <div class="form__submit">
+                    <?php wp_nonce_field('dw_contact_form_action', '_contact_nonce'); ?>
                     <input type="hidden" name="action" value="dw_submit_contact_form">
                     <button type="submit" name="contact_form_submit"
                             class="form__submit--btn"><?= __hepl('Envoyer le message') ?></button>

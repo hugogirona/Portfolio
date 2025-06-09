@@ -48,7 +48,7 @@ class ContactForm
         // Sauvegarder le formulaire envoyé en base de données.
         wp_insert_post([
             'post_type' => 'contact_message',
-            'post_title' => $data['firstname'].' '.$data['lastname'],
+            'post_title' => $data['fullname'],
             'post_content' => $this->generateEmailContent($data),
             'post_status' => 'publish',
         ]);
@@ -62,7 +62,7 @@ class ContactForm
 
         // Retourner à la page précédente pour afficher un message de succès.
         // Mettre un message de succès en session pour pouvoir l'afficher sur la page suivante :
-        $_SESSION['contact_form_success'] = 'Merci, '.$data['firstname'].'! Votre message a bien été envoyé.';
+        $_SESSION['contact_form_success'] = 'Merci, '.$data['fullname'].'! Votre message a bien été envoyé.';
         // Retourner à la page précédente pour afficher les erreurs de validation :
         wp_safe_redirect($_SERVER['HTTP_REFERER']);
         exit();
@@ -94,13 +94,23 @@ class ContactForm
         return 'Veuillez renseigner ce champ.';
     }
 
+    protected function email_domain_has_mx(string $email): bool
+    {
+        $domain = substr(strrchr($email, "@"), 1);
+        return checkdnsrr($domain, 'MX');
+    }
+
     protected function check_email(string $field, mixed $value): bool|string
     {
-        if(filter_var($value, FILTER_VALIDATE_EMAIL)) {
-            return true;
+        if (!filter_var($value, FILTER_VALIDATE_EMAIL)) {
+            return 'Adresse invalide.';
         }
 
-        return 'Adresse invalide.';
+        if (!$this->email_domain_has_mx($value)) {
+            return 'Le domaine de cette adresse email semble invalide.';
+        }
+
+        return true;
     }
 
     protected function cleanData(array $data): array
@@ -117,7 +127,7 @@ class ContactForm
     protected function generateEmailContent(array $data): string
     {
         return 'Bonjour,'.PHP_EOL
-            .'Vous avez un nouveau message de '.$data['firstname'].' '.$data['lastname'].':'.PHP_EOL
+            .'Vous avez un nouveau message de '.$data['fullname'].' '.':'.PHP_EOL.PHP_EOL
             .$data['message'].PHP_EOL.PHP_EOL
             .'----'.PHP_EOL
             .'Adresse mail: '.$data['email'];

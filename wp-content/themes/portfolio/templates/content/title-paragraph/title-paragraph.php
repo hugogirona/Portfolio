@@ -5,7 +5,7 @@ $paragraphs = get_sub_field('the_paragraph');
 
 <section class="section presentation">
     <div class="presentation__container">
-        <h2 class="presentation__title screenreader__only"><?= __hepl('Section de présentation')?></h2>
+        <h2 class="presentation__title "><?= __hepl('À propos')?></h2>
         <div class="title-paragraph__container">
             <?php foreach ($paragraphs as $paragraph) : ?>
                 <article class="title-paragraph">

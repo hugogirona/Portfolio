@@ -27,7 +27,7 @@
 
   &__cta{
     align-self: center;
-    margin-top: 1.25rem;
+    margin-top: 2.5rem;
 
     @include tablet-up{
       align-self: flex-end;
@@ -38,5 +38,6 @@
 .cta-above{
   margin-top: 4rem;
   align-self: center;
-  color: var(--text-primary);
+  color: var(--orange);
+  opacity: .5;
 }

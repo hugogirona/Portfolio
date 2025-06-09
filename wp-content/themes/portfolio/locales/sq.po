@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-05-14 16:57+0200\n"
-"PO-Revision-Date: 2025-05-14 17:23+0200\n"
+"POT-Creation-Date: 2025-06-09 18:39+0200\n"
+"PO-Revision-Date: 2025-06-09 18:40+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sq\n"
@@ -38,27 +38,27 @@ msgstr "faqja kryesore"
 msgid "Navigation secondaire"
 msgstr "Navigimi dytësor"
 
-#: footer.php:7 template-contact.php:6
+#: footer.php:7 template-contact.php:8
 msgid "Coordonnées"
 msgstr "Detajet e kontaktit"
 
-#: footer.php:18
+#: footer.php:17
 msgid "Navigation"
 msgstr "Navigimi"
 
-#: footer.php:33
+#: footer.php:32
 msgid "Ressources utiles"
 msgstr "Burime të dobishme"
 
-#: footer.php:48
+#: footer.php:47
 msgid "Suivez-moi"
 msgstr "Më ndiq"
 
-#: front-page.php:50
+#: front-page.php:70
 msgid "Mes derniers "
 msgstr "Projektet"
 
-#: front-page.php:53
+#: front-page.php:73 single-project.php:31
 msgid "projets"
 msgstr "e fundit "
 
@@ -78,77 +78,77 @@ msgstr "lloji-i-projektit"
 msgid "fr"
 msgstr "sq"
 
-#: header.php:26
+#: header.php:31
 msgid "Se diriger vers la page d’accueil"
 msgstr "Shko te faqja kryesore"
 
-#: header.php:34
+#: header.php:38
 msgid "Navigation principale"
 msgstr "Navigimi kryesor"
 
-#: header.php:37
+#: header.php:40
 msgid "Ouvrir le menu"
 msgstr "Hap menynë"
 
-#: header.php:82
+#: header.php:86
 msgid "Changer la langue en "
 msgstr "Ndrysho gjuhën në "
 
-#: single-project.php:27
-msgid "Mes derniers projets"
-msgstr "Projektet e fundit"
+#: single-project.php:28
+msgid "Quelques autres"
+msgstr "Disa të tjerë"
 
-#: template-contact.php:19
+#: template-contact.php:21
 msgid "Formulaire de contact"
 msgstr "Formulari i kontaktit"
 
-#: template-contact.php:35
+#: template-contact.php:38
 msgid "Informations de contact"
 msgstr "Informacione Kontakti"
 
-#: template-contact.php:38
+#: template-contact.php:41
 msgid "Nom complet"
 msgstr "Emri i plotë"
 
-#: template-contact.php:45
+#: template-contact.php:48
 msgid "ex: John Doe"
 msgstr "p.sh.: John Doe"
 
-#: template-contact.php:54
+#: template-contact.php:57
 msgid "Adresse email"
 msgstr "Adresa e email-it"
 
-#: template-contact.php:61
+#: template-contact.php:64
 msgid "ex: johndoe@email.com"
 msgstr "p.sh.: johndoe@email.com"
 
-#: template-contact.php:70
+#: template-contact.php:73
 msgid "Sujet"
 msgstr "Subjekti"
 
-#: template-contact.php:76
-msgid "Un projet, une demande d’information ?"
-msgstr "Një projekt, një kërkesë për informacion?"
-
-#: template-contact.php:85
+#: template-contact.php:88
 msgid "Message"
 msgstr "Mesazh"
 
-#: template-contact.php:91
-msgid "Écrivez votre message ici"
-msgstr "Shkruani mesazhin tuaj këtu"
+#: template-contact.php:95
+msgid "Écrivez votre message ici..."
+msgstr "Shkruani mesazhin tuaj këtu..."
 
-#: template-contact.php:100
+#: template-contact.php:104
 msgid "Les champs marqués d’un astérisque"
 msgstr "Fushat e shënuara me një yll"
 
-#: template-contact.php:100
+#: template-contact.php:105
 msgid "sont obligatoires"
 msgstr "janë të detyrueshme"
 
-#: template-contact.php:104
+#: template-contact.php:111
 msgid "Envoyer le message"
 msgstr "Dërgo mesazhin"
+
+#: template-legal.php:15
+msgid "Mentions légales"
+msgstr "Njoftime ligjore"
 
 #: template-projects.php:7
 msgid "Projets"
@@ -157,3 +157,13 @@ msgstr "Projekte"
 #: templates/content/project-card/project-card.php:2
 msgid "Vers mon projet "
 msgstr "Drejt projektit tim "
+
+#: templates/content/title-paragraph/title-paragraph.php:8
+msgid "À propos"
+msgstr "Rreth"
+
+#~ msgid "Mes derniers projets"
+#~ msgstr "Projektet e fundit"
+
+#~ msgid "Un projet, une demande d’information ?"
+#~ msgstr "Një projekt, një kërkesë për informacion?"

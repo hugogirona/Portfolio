@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="<?= portfolio_asset('css'); ?>">
+    <link rel="stylesheet" href="<?= portfolio_asset('css'); ?>">
     <script src="<?= portfolio_asset('js') ?>" defer type="module"></script>
     <?php wp_head(); ?>
 </head>
@@ -18,14 +18,18 @@ $current_url = home_url(add_query_arg([], $_SERVER['REQUEST_URI']));
 ?>
 
 <body class="the_body">
+
 <div class="wrapper">
     <header class="header">
         <h1 class="screenreader__only">
             <?= get_the_title() ?>
         </h1>
 
+        <div class="bg-rect-l"></div>
+        <div class="bg-rect-r"></div>
+
         <a class="nav__logo" href="<?= home_url() ?>" title="<?= __hepl('Se diriger vers la page d’accueil') ?>">
-            <img src="<?= get_field('company_logo', 'option')['url'] ?>" alt="" height="auto" width="48">
+            <img src="<?= get_field('company_logo', 'option')['url'] ?>" alt="" height="48" width="48">
             <p class="nav__name"><?= get_field('company_name', 'option') ?></p>
         </a>
 
@@ -33,8 +37,8 @@ $current_url = home_url(add_query_arg([], $_SERVER['REQUEST_URI']));
         <nav class="nav">
             <h2 class="screenreader__only"><?= __hepl('Navigation principale') ?></h2>
 
-            <input type="checkbox" id="burger-toggle" class="nav__checkbox"/>
-            <label for="burger-toggle" class="nav__burger" aria-label="<?= esc_attr(__hepl('Ouvrir le menu')) ?>">
+            <input type="checkbox" id="burger-toggle" class="nav__checkbox" aria-label="<?= esc_attr(__hepl('Ouvrir le menu')) ?>"/>
+            <label for="burger-toggle" class="nav__burger" >
                 <span class="nav__burger--line"></span>
             </label>
 
@@ -46,7 +50,7 @@ $current_url = home_url(add_query_arg([], $_SERVER['REQUEST_URI']));
                     <li class="nav__item <?= $active_class ?>">
                         <a class="nav__link <?= $active_class ?>"
                            href="<?= esc_url($link['link']['url']) ?>"
-                           target="<?= esc_attr($link['link']['target']) ?>"
+                           target="<?= esc_attr($link['link']['target'] ? $link['link']['target'] : '_self') ?>"
                            title="<?= esc_attr($link['link_title']) ?>"><?= esc_html($link['link']['title']) ?></a>
                     </li>
 

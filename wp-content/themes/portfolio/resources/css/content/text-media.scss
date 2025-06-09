@@ -37,8 +37,12 @@
     align-items: center;
     justify-content: center;
     flex-grow: 1;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: rgba(255,255,255, .05) 0 0 2rem 0;
 
     @include desktop-up {
+      min-width: 45%;
       max-width: 45%;
 
       &--left {
@@ -68,4 +72,23 @@
     display: block;
     object-fit: contain;
   }
+
+  &__link{
+    display: inline-block;
+    color: var(--text-primary);
+    opacity: .7;
+    transition: all .1s;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      opacity: 1;
+      border-bottom: 1px solid var(--text-primary);
+    }
+  }
+}
+
+.text-media__cta-divider{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
 }

@@ -4,25 +4,46 @@
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr auto ;
+  grid-template-rows: 1fr auto;
   grid-auto-columns: auto;
   grid-auto-rows: auto;
   position: relative;
   margin-top: 9rem;
   margin-bottom: 4rem;
 
-  &::after{
+
+  &::after {
+
     content: '';
     position: absolute;
-    bottom: 40%;
-    left: -15%; // 👉 elle part de la gauche
-    width: 100px;
-    height: 100px;
     background: url('../../resources/img/spaceship.svg') no-repeat center/contain;
-    animation: fly-diagonal-right 10s ease-out infinite;
     animation-delay: 2s;
     pointer-events: none;
     z-index: -1;
+
+    @include tablet-up {
+      bottom: 40%;
+      left: -15%; // 👉 elle part de la gauche
+      width: 100px;
+      height: 100px;
+      animation: fly-diagonal-right-desktop 10s ease-out infinite;
+    }
+
+    @include tablet {
+      animation: fly-diagonal-right-small-screen 7s ease-out infinite;
+      bottom: 40%;
+      left: -15%; // 👉 elle part de la gauche
+      width: 80px;
+      height: 80px;
+    }
+
+    @include mobile {
+      animation: fly-diagonal-right-small-screen 5s ease-out infinite;
+      bottom: 60%;
+      left: -15%; // 👉 elle part de la gauche
+      width: 60px;
+      height: 60px;
+    }
   }
 
 
@@ -65,7 +86,8 @@
   &__svg--text {
 
     position: absolute;
-    visibility: hidden;
+    display: none;
+    animation: spin 8s infinite linear;
 
     @include desktop-up {
       visibility: visible;
@@ -94,7 +116,7 @@
 
     display: grid;
     grid-template-columns: 1fr 1fr; // 2 colonnes de taille égale
-    grid-template-rows: 1fr 1fr ; // 2 lignes
+    grid-template-rows: 1fr 1fr; // 2 lignes
     font-size: 18vw;
     gap: 2rem;
 
@@ -115,6 +137,8 @@
       line-height: .8;
       grid-column: 1 / 3;
       grid-row: 1 / 2;
+      overflow: hidden;
+
 
 
       @include mobile {
@@ -133,6 +157,7 @@
       grid-column: 2 / 3;
       grid-row: 2 / 3;
       justify-self: end;
+      overflow: hidden;
 
       @include tablet {
         align-self: flex-end;
@@ -147,15 +172,28 @@
         font-size: 21.375rem;
       }
     }
+    & span {
+      transform: translateY(100%);
+      animation: appear-up .4s ease-out;
+      animation-fill-mode: forwards;
+      display: inline-block;
+    }
+
   }
 
   &__name {
+    transform: translateX(100%);
+    animation: appear-right .3s ease-out .4s;
+    animation-fill-mode: forwards;
 
     &__container {
       display: flex;
-      justify-content: flex-end;
+      justify-self: flex-end;
       grid-column: 2 / 3;
       grid-row: 2 / 2;
+      overflow: hidden;
+      width: fit-content;
+      height: fit-content;
 
       @include tablet {
         align-self: flex-end;
@@ -179,22 +217,29 @@
       font-size: 2rem;
     }
 
-    @include tablet{
+    @include tablet {
       font-size: 2rem;
     }
 
-    @include widescreen{
+    @include widescreen {
       font-size: 5rem;
     }
   }
 
   &__quote {
+    transform: translateY(100%);
+    animation: appear-up .4s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: .4s;
+
 
     &__container {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-        align-self: center;
-        transform: translateY(3rem);
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      align-self: center;
+      transform: translateY(3rem);
+      overflow: hidden;
+
 
       @include tablet {
         font-size: 0.8125rem;
@@ -218,8 +263,8 @@
       }
     }
 
-    @include desktop-up{
-      font-size:1.25rem;
+    @include desktop-up {
+      font-size: 1.25rem;
       max-width: 350px;
     }
 
@@ -250,7 +295,7 @@
 }
 
 
-@keyframes fly-diagonal-right {
+@keyframes fly-diagonal-right-desktop {
   0% {
     transform: translate(0, 0) rotate(-25deg) scale(1);
     opacity: 1;
@@ -262,12 +307,51 @@
 
 
   60% {
-    transform: translate(120vw, -50vh) rotate(-15deg) scale(0.1);
+    transform: translate(120vw, -30vh) rotate(-15deg) scale(0.1);
     opacity: 0;
   }
 
   100% {
-    transform: translate(120vw, -50vh) rotate(-15deg) scale(0.1);
+    transform: translate(120vw, -30vh) rotate(-15deg) scale(0.1);
     opacity: 0;
+  }
+}
+
+@keyframes fly-diagonal-right-small-screen {
+  0% {
+    transform: translate(0, 0) rotate(-25deg) scale(1);
+    opacity: 1;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  60% {
+    transform: translate(120vw, -20vh) rotate(-15deg) scale(0.1);
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: translate(120vw, -20vh) rotate(-15deg) scale(0.1);
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes appear-up {
+  to {
+    transform: translateY(0)
+  }
+}
+
+@keyframes appear-right {
+  to {
+    transform: translateX(0)
   }
 }
