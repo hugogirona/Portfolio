@@ -1,6 +1,5 @@
 @import "../settings/breackpoints";
 
-
 .header{
   display: flex;
   justify-content: space-between;
@@ -8,22 +7,45 @@
   padding: 1.25rem;
 
   @include desktop-up {
-
+    padding: 2rem 4rem;
   }
 
   @include desktop {
-
-  }
-
-  @include tablet-up {
-
+    padding: 2rem 4rem;
   }
 
   @include tablet {
-
+    padding: 1.25rem;
   }
 
   @include mobile {
+    padding: 1.25rem;
+  }
+}
+
+.bg-rect-l, .bg-rect-r {
+  position: absolute;
+  top: 0;
+  height:30vh;
+  z-index: -1;
+
+  @include mobile {
+    display: none;
 
   }
+}
+
+.bg-rect-r {
+  width: 25%;
+  right: 25%;
+  border-right: 1px solid var(--greyish);
+  opacity: .2;
+}
+
+.bg-rect-l {
+width: 25%;
+  left: 25%;
+  border-left: 1px solid var(--greyish);
+  border-right: 1px solid var(--greyish);
+  opacity: .2;
 }

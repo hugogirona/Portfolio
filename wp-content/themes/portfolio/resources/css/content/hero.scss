@@ -1,85 +1,357 @@
 @import "../settings/breackpoints";
 
 .hero {
-  margin: 0 8.8%;
-  display: flex;
-  flex-direction: column;
 
-  &__svg--sun{
-    align-self: flex-end;
-    transform: translateY(3rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  grid-auto-columns: auto;
+  grid-auto-rows: auto;
+  position: relative;
+  margin-top: 9rem;
+  margin-bottom: 4rem;
+
+
+  &::after {
+
+    content: '';
+    position: absolute;
+    background: url('../../resources/img/spaceship.svg') no-repeat center/contain;
+    animation-delay: 2s;
+    pointer-events: none;
     z-index: -1;
-  }
-
-  &__title {
-    display: flex;
-    flex-direction: column;
-    gap: 0.625rem;
-
-    &--first {
-      font-family: 'Lora-italic', 'Georgia', serif;
-      font-size: 4rem;
-      line-height: .8;
-    }
-
-
-     &--second{
-       align-self: flex-end;
-       font-size: 6rem;
-       font-weight: 800;
-       line-height: .8;
-    }
-  }
-
-  &__name {
-
-    &__container {
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    display: inline-block;
-    font-size: 2rem;
-    line-height: 1.2;
-    font-weight: 200;
-    text-align: right;
-    background: linear-gradient(0.25turn, var(--text-primary), var(--oranger));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-
-    @include desktop-up {
-
-    }
-
-    @include desktop {
-
-    }
 
     @include tablet-up {
-
+      bottom: 40%;
+      left: -15%; // 👉 elle part de la gauche
+      width: 100px;
+      height: 100px;
+      animation: fly-diagonal-right-desktop 10s ease-out infinite;
     }
 
     @include tablet {
-
+      animation: fly-diagonal-right-small-screen 7s ease-out infinite;
+      bottom: 40%;
+      left: -15%; // 👉 elle part de la gauche
+      width: 80px;
+      height: 80px;
     }
 
     @include mobile {
-
+      animation: fly-diagonal-right-small-screen 5s ease-out infinite;
+      bottom: 60%;
+      left: -15%; // 👉 elle part de la gauche
+      width: 60px;
+      height: 60px;
     }
   }
 
-  &__quote{
-    font-size: 0.8125rem;
-    line-height: 1.4;
-    color: var(--text-secondary);
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 0;
+  }
+
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 8.8% 0;
+  }
+
+  &__svg--sun {
+    position: absolute;
+    right: 12vw;
+    top: -10vw;
+    width: 15vw;
+    height: 15vw;
+    min-width: 200px;
+    min-height: 200px;
     max-width: 300px;
-    margin-top: 1.125rem;
-    margin-bottom: 2.5rem;
+    max-height: 300px;
+    z-index: -1;
+
+    @include desktop-up {
+      right: 22rem;
+      top: -10rem;
+    }
+
+
+    @include mobile {
+      transform: translateX(3rem) translateY(-3rem) scale(0.8);
+    }
+  }
+
+  &__svg--text {
+
+    position: absolute;
+    display: none;
+    animation: spin 8s infinite linear;
+
+    @include desktop-up {
+      visibility: visible;
+      right: 7rem;
+      top: -2rem;
+      width: 10vw;
+      height: 10vw;
+      min-width: 200px;
+      min-height: 200px;
+      max-width: 250px;
+      max-height: 250px;
+      opacity: .7;
+      font-size: 0.8125rem;
+    }
+
+    & text {
+      fill: var(--text-primary);
+      letter-spacing: 0.19rem;
+    }
+  }
+
+  &__title {
+
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr; // 2 colonnes de taille égale
+    grid-template-rows: 1fr 1fr; // 2 lignes
+    font-size: 18vw;
+    gap: 2rem;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+    }
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+    }
+
+    &--first {
+      font-family: 'Lora-italic', 'Georgia', serif;
+      line-height: .8;
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+      overflow: hidden;
+
+
+
+      @include mobile {
+        font-size: 4rem;
+      }
+
+      @include widescreen {
+        font-size: 21.375rem;
+      }
+    }
+
+
+    &--second {
+      font-weight: 800;
+      line-height: .8;
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      justify-self: end;
+      overflow: hidden;
+
+      @include tablet {
+        align-self: flex-end;
+      }
+
+      @include mobile {
+        font-size: 6rem;
+        align-self: flex-end;
+      }
+
+      @include widescreen {
+        font-size: 21.375rem;
+      }
+    }
+    & span {
+      transform: translateY(100%);
+      animation: appear-up .4s ease-out;
+      animation-fill-mode: forwards;
+      display: inline-block;
+    }
+
+  }
+
+  &__name {
+    transform: translateX(100%);
+    animation: appear-right .3s ease-out .4s;
+    animation-fill-mode: forwards;
+
+    &__container {
+      display: flex;
+      justify-self: flex-end;
+      grid-column: 2 / 3;
+      grid-row: 2 / 2;
+      overflow: hidden;
+      width: fit-content;
+      height: fit-content;
+
+      @include tablet {
+        align-self: flex-end;
+      }
+
+      @include mobile {
+        align-self: flex-end;
+      }
+    }
+
+    display: inline-block;
+    line-height: 1.2;
+    font-weight: 200;
+    background: linear-gradient(0.25turn, var(--text-primary), var(--oranger));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 4vw;
+
+
+    @include mobile {
+      font-size: 2rem;
+    }
+
+    @include tablet {
+      font-size: 2rem;
+    }
+
+    @include widescreen {
+      font-size: 5rem;
+    }
+  }
+
+  &__quote {
+    transform: translateY(100%);
+    animation: appear-up .4s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: .4s;
+
+
+    &__container {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      align-self: center;
+      transform: translateY(3rem);
+      overflow: hidden;
+
+
+      @include tablet {
+        font-size: 0.8125rem;
+        max-width: 300px;
+        margin-top: 1.125rem;
+        margin-bottom: 2.5rem;
+        display: block;
+        transform: translateY(0);
+        align-self: start;
+
+      }
+
+      @include mobile {
+        font-size: 0.8125rem;
+        max-width: 300px;
+        margin-top: 1.125rem;
+        margin-bottom: 2.5rem;
+        display: block;
+        transform: translateY(0);
+        align-self: start;
+      }
+    }
+
+    @include desktop-up {
+      font-size: 1.25rem;
+      max-width: 350px;
+    }
+
+    color: var(--text-secondary);
+    line-height: 1.4;
+
   }
 
   &__cta {
     display: inline-block;
-    align-self: flex-end;
+    grid-column: 1 / 2;
+    grid-row: 2 / 2;
+    justify-self: start;
+    align-self: start;
+    transform: translatex(7rem);
+
+    @include tablet {
+      align-self: flex-end;
+      transform: translatex(0);
+
+    }
+
+    @include mobile {
+      align-self: flex-end;
+      transform: translatex(0);
+    }
+  }
+}
+
+
+@keyframes fly-diagonal-right-desktop {
+  0% {
+    transform: translate(0, 0) rotate(-25deg) scale(1);
+    opacity: 1;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+
+  60% {
+    transform: translate(120vw, -30vh) rotate(-15deg) scale(0.1);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(120vw, -30vh) rotate(-15deg) scale(0.1);
+    opacity: 0;
+  }
+}
+
+@keyframes fly-diagonal-right-small-screen {
+  0% {
+    transform: translate(0, 0) rotate(-25deg) scale(1);
+    opacity: 1;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  60% {
+    transform: translate(120vw, -20vh) rotate(-15deg) scale(0.1);
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: translate(120vw, -20vh) rotate(-15deg) scale(0.1);
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes appear-up {
+  to {
+    transform: translateY(0)
+  }
+}
+
+@keyframes appear-right {
+  to {
+    transform: translateX(0)
   }
 }

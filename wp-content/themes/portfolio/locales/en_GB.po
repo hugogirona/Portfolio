@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-05-14 16:56+0200\n"
-"PO-Revision-Date: 2025-05-14 16:56+0200\n"
+"POT-Creation-Date: 2025-06-09 18:38+0200\n"
+"PO-Revision-Date: 2025-06-09 18:39+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_GB\n"
@@ -38,27 +38,27 @@ msgstr "home page"
 msgid "Navigation secondaire"
 msgstr "Secondary navigation"
 
-#: footer.php:7 template-contact.php:6
+#: footer.php:7 template-contact.php:8
 msgid "Coordonnées"
 msgstr "Informations"
 
-#: footer.php:18
+#: footer.php:17
 msgid "Navigation"
 msgstr "Navigation"
 
-#: footer.php:33
+#: footer.php:32
 msgid "Ressources utiles"
 msgstr "Useful resources"
 
-#: footer.php:48
+#: footer.php:47
 msgid "Suivez-moi"
 msgstr "Follow me"
 
-#: front-page.php:50
+#: front-page.php:70
 msgid "Mes derniers "
 msgstr "My latest "
 
-#: front-page.php:53
+#: front-page.php:73 single-project.php:31
 msgid "projets"
 msgstr "projects"
 
@@ -78,77 +78,77 @@ msgstr "project-type"
 msgid "fr"
 msgstr "en"
 
-#: header.php:26
+#: header.php:31
 msgid "Se diriger vers la page d’accueil"
 msgstr "Go to the home page"
 
-#: header.php:34
+#: header.php:38
 msgid "Navigation principale"
 msgstr "Primary navigation"
 
-#: header.php:37
+#: header.php:40
 msgid "Ouvrir le menu"
 msgstr "Open the menu"
 
-#: header.php:82
+#: header.php:86
 msgid "Changer la langue en "
 msgstr "Switch language to "
 
-#: single-project.php:27
-msgid "Mes derniers projets"
-msgstr "My latest projects"
+#: single-project.php:28
+msgid "Quelques autres"
+msgstr "Some more"
 
-#: template-contact.php:19
+#: template-contact.php:21
 msgid "Formulaire de contact"
 msgstr "Contact form"
 
-#: template-contact.php:35
+#: template-contact.php:38
 msgid "Informations de contact"
 msgstr "Contact information"
 
-#: template-contact.php:38
+#: template-contact.php:41
 msgid "Nom complet"
 msgstr "Full name"
 
-#: template-contact.php:45
+#: template-contact.php:48
 msgid "ex: John Doe"
 msgstr "ex: John Doe"
 
-#: template-contact.php:54
+#: template-contact.php:57
 msgid "Adresse email"
 msgstr "Email"
 
-#: template-contact.php:61
+#: template-contact.php:64
 msgid "ex: johndoe@email.com"
 msgstr "e.g. johndoe@email.com"
 
-#: template-contact.php:70
+#: template-contact.php:73
 msgid "Sujet"
 msgstr "Subject"
 
-#: template-contact.php:76
-msgid "Un projet, une demande d’information ?"
-msgstr "Do you have a project or a request for information?"
-
-#: template-contact.php:85
+#: template-contact.php:88
 msgid "Message"
 msgstr "Message"
 
-#: template-contact.php:91
-msgid "Écrivez votre message ici"
-msgstr "Write your message here"
+#: template-contact.php:95
+msgid "Écrivez votre message ici..."
+msgstr "Write your message here..."
 
-#: template-contact.php:100
+#: template-contact.php:104
 msgid "Les champs marqués d’un astérisque"
 msgstr "Fields marked with an asterisk"
 
-#: template-contact.php:100
+#: template-contact.php:105
 msgid "sont obligatoires"
 msgstr "are mandatory"
 
-#: template-contact.php:104
+#: template-contact.php:111
 msgid "Envoyer le message"
 msgstr "Send message"
+
+#: template-legal.php:15
+msgid "Mentions légales"
+msgstr "Legal notice"
 
 #: template-projects.php:7
 msgid "Projets"
@@ -157,3 +157,13 @@ msgstr "Projects"
 #: templates/content/project-card/project-card.php:2
 msgid "Vers mon projet "
 msgstr "To my project "
+
+#: templates/content/title-paragraph/title-paragraph.php:8
+msgid "À propos"
+msgstr ""
+
+#~ msgid "Mes derniers projets"
+#~ msgstr "My latest projects"
+
+#~ msgid "Un projet, une demande d’information ?"
+#~ msgstr "Do you have a project or a request for information?"

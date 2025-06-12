@@ -1,0 +1,90 @@
+@import "../settings/breackpoints";
+
+.form {
+  background-color: var(--background-color);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+
+  @include tablet-up {
+    min-width: 30rem;
+  }
+
+  @include tablet {
+    width: calc(100% - 2.5rem);
+  }
+
+
+
+
+
+  & label {
+    font-size: 1rem;
+    color: var(--text-primary);
+    opacity: .7;
+  }
+
+  & input.field__input, & textarea {
+    padding: 0.75rem 1.25rem;
+    background-color: transparent;
+    border: 1px solid var(--text-secondary);
+    border-radius: 5px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    outline: none;
+
+    &:focus-visible {
+      border-color: var(--text-primary);
+    }
+  }
+
+  & textarea {
+    font-family: inherit;
+    resize: none;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    & div {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+  }
+
+  &__submit {
+
+    &--btn {
+      display: inline-block;
+      width: 100%;
+      padding: 0.75rem 1.25rem;
+      background-color: var(--cta-background2);
+      color: var(--text-primary);
+      border-radius: 5px;
+      border-style: none;
+      font-size: inherit;
+      transition: 0.3s ease;
+
+      &:hover {
+        background-color: var(--cta-background1);
+      }
+    }
+  }
+}
+
+.ast {
+  color: var(--orange);
+  opacity: .5;
+
+  &__p {
+    font-size: 0.875rem;
+    color: var(--text-primary);
+    opacity: .7;
+  }
+}

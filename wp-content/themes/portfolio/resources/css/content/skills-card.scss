@@ -1,50 +1,72 @@
+@import "../settings/breackpoints";
 
 
-.skills__card{
+.skills__card {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
 
-
-
-  &__container{
+  &__container {
     display: flex;
-    flex-direction: column;
-    gap: 3.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 7rem;
+    row-gap: 4rem;
+
+
+    @include tablet {
+      flex-direction: column;
+      gap: 3.5rem;
+    }
+    @include mobile {
+      flex-direction: column;
+      gap: 3.5rem;
+    }
   }
 
-  &__divider{
+  &__divider {
     display: flex;
+    max-width: 25rem;
     gap: 1.25rem;
-    &::before{
+
+    &::before {
       content: url('../../resources/img/JavaScript.svg');
-      width: 7rem;
+      height:100%;
+      width: 40%;
     }
-    &:nth-child(2):before{
+
+    &:nth-child(2):before {
       content: url("../../resources/img/TypeScript.svg");
 
     }
-    &:nth-child(3):before{
+
+    &:nth-child(3):before {
       content: url("../../resources/img/HTML.svg");
 
     }
-    &:nth-child(4):before{
+
+    &:nth-child(4):before {
       content: url("../../resources/img/CSS.svg");
 
     }
-    &:nth-child(5):before{
+
+    &:nth-child(5):before {
       content: url("../../resources/img/PHP.svg");
     }
-    &:nth-child(6):before{
+
+    &:nth-child(6):before {
       content: url("../../resources/img/MySQL.svg");
     }
   }
 
-  &__title{
+  &__title {
     font-size: 1.25rem;
     font-weight: 500;
     color: var(--text-primary);
     opacity: .7;
   }
 
-  &__content{
+  &__content {
     color: var(--text-secondary);
     line-height: 1.5;
   }

@@ -13,6 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    //user-select: none;
 
     @include desktop-up {
       display: none;
@@ -29,7 +30,6 @@
 
     }
 
-
     /* Hamburger Line */
     &--line {
       position: relative;
@@ -40,7 +40,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all 0.4s ease;
+      transition: all 0.3s ease;
 
 
       /* Hamburger Lines - Top & Bottom */

@@ -30,8 +30,8 @@
         <?php if(get_field('cta_link') && get_field('cta_content')) :?>
             <a href="<?=esc_url(get_field('cta_link')['url'])?>"
                title="<?=esc_attr(get_field('cta_link')['title'])?>"
-               target="<?=esc_attr(get_field('cta_link')['target'])?>"
-               class="cta projects_cta"><?= esc_html(get_field('cta_content'))?></a>
+               target="<?=esc_attr(get_field('cta_link')['target'] ? : '_self')?>"
+               class="cta cta--right projects__cta--archive"><?= esc_html(get_field('cta_content'))?></a>
         <?php endif; ?>
     </div>
 

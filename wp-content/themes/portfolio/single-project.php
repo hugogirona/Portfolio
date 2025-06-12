@@ -8,9 +8,9 @@ get_header(); ?>
 // de contenu propre à Wordpress:
 if (have_posts()): while (have_posts()): the_post(); ?>
 
-    <section class="single_project__header">
-        <h2 class="single_project__title"><?php the_field('project_title'); ?></h2>
-        <div>
+    <section class=" section single-project">
+        <h2 class="single-project__title"><?php the_field('project_title'); ?></h2>
+        <div class="single-project__divider">
             <?php include 'templates/content/flexible.php' ?>
         </div>
     </section>
@@ -21,13 +21,18 @@ else: ?>
     <p>Ce projet n'existe pas.</p>
 <?php endif; ?>
 
-    <section class="section other-projects">
-        <div class="other-projects__container">
-            <h2 class="other-projects__title">
-                <?= __hepl('Mes derniers projets') ?>
+    <section class="section projects">
+        <div class="projects__container">
+            <h2 class="projects__title">
+                <i class="projects__title--first">
+                    <?= __hepl('Quelques autres') ?>
+                </i>
+                <i class="projects__title--second">
+                    <?= __hepl('projets') ?>
+                </i>
             </h2>
 
-            <div class="other-projects__grid">
+            <div class="projects__grid">
                 <?php
                 $projets = new WP_Query([
                     'post_type' => 'project',
@@ -49,9 +54,11 @@ else: ?>
                 <a href="<?=esc_url(get_field('cta_link')['url'])?>"
                    title="<?=esc_attr(get_field('cta_link')['title'])?>"
                    target="<?=esc_attr(get_field('cta_link')['target'])?>"
-                   class="cta skills_cta"><?= esc_html(get_field('cta_content'))?></a>
+                   class="cta cta--right projects__cta--single"><?= esc_html(get_field('cta_content'))?>
+                </a>
             <?php endif; ?>
         </div>
+
     </section>
 
 
