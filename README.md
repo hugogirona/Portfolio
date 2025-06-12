@@ -2,85 +2,124 @@
 
 ⸻
 
-🚀 Objectif du projet
+
+# 🧑‍💻 Portfolio - Développement d'un site personnel
+
+Bienvenue sur le dépôt Git du projet **Portfolio Web**.  
+Ce portfolio est conçu pour présenter mes compétences, mes projets et ma personnalité, à travers un site élégant, accessible et 100% sur-mesure.
+---
+
+
+##🚀 Objectif du projet
 
 Créer un portfolio personnel à la fois moderne, clair et responsive, en mettant en valeur mes compétences, mes projets, ainsi que ma démarche UX/UI.
 Le site est développé avec WordPress (thème sur-mesure) et utilise ACF pour la gestion de contenu flexible.
 
-⸻
 
-📅 Étapes du projet
+---
 
-1. 🧠 Phase de réflexion & intention
-	•	Définition des objectifs du portfolio : répondre aux contraintes établies par nos professeurs.
-	•	Analyse des besoins : quelles sections sont essentielles (À propos, Projets, Compétences, Contact…).
-	•	Benchmarking : étude de portfolios de designers et développeurs (ex. Awwwards, Behance, Codrops).
+## 📅 Rythme de production
 
-2. 🎨 Création du moodboard
-	•	Réalisation d’un moodboard visuel (sur Figma) pour définir l’ambiance globale du site.
-	•	Choix d’une palette de couleurs: je suis parti sur gris-noir-crème-orange.
-	•	Sélection de typographies harmonieuses (Google Fonts). (LORA et ROBOTO)
+### 🧠 Phase de réflexion
 
-3. ✏️ Wireframes basse fidélité
-	•	Esquisse des premières structures de pages (mobile-first).
-	•	Tests de différentes mises en page pour la page d’accueil et la page projet.
-	•	Validation d’une grille de 12 colonnes pour desktop.
+- Analyse des objectifs du portfolio : répondres aux contraintes énnocées par nos professeurs.
+- Benchmarking : étude de portfolios modernes (Awwwards, Behance...).
+- Rédaction d’une **liste des pages nécessaires** et d’un zoning global.
 
-4. 🖌️ Design UI – maquette haute fidélité
-	•	Création d’une maquette complète dans Figma :
-	•	Accueil, À propos, Projets, Détail projet, Contact.
-	•	Révision du design en fonction des retours de proches.
-	•	Accessibilité : contrastes conformes à WCAG AA.
+---
 
-5. ✅ Design final validé
-	•	Export des assets (logos, icônes, images optimisées).
-	•	Organisation des composants UI réutilisables (boutons, titres, cartes projets).
+### 🎨 Moodboard & inspiration
 
-⸻
+- Réalisation d’un moodboard (Figma) avec :
+  - Couleurs dominantes,
+  - Typographies harmonieuses (Google Fonts avec Lora et Roboto),
+  - Style visuel cohérent avec ma personnalité.
+- Sélection d'inspirations UI/UX (interfaces minimalistes, portfolios interactifs...).
 
-🧱 Développement
+---
 
-6. ⚙️ Intégration WordPress & ACF
-	•	Création d’un thème custom.
-	•	Définition des Custom Post Types : Projets, Messages de contact.
-	•	Mise en place de mes champs flexibles.
+### ✏️ Wireframes basse fidélité
 
-7. 🧾 Structure HTML
-	•	Intégration sémantique (<section>, <article>, <nav>, etc.).
-	•	Utilisation de la méthodologie BEM pour les noms de classes CSS. (enfin j'ai essayé quoi..)
-	•	Respect de la hiérarchie des titres (<h1> unique, logique de niveaux).
-  •	Intégration d'un formulaire de contact custom fonctionnel avec validation.
+- Élaboration des premières maquettes au crayon (mobile-first).
+- Organisation des contenus sur grille (12 colonnes en desktop).
+- Validation rapide avec entourage proche.
 
-9. 🎨 CSS & design system
-	•	Création de fichier SCSS d'option avec :
-	•	Variables globales (colors, fonts, breakpoints)
-	•	Fichiers partiels pour les composants (header.scss, cards.scss, etc.)
-	•	Utilisation de flexbox et grid pour le layout.
-	•	Responsive design soigné sur mobile, tablette, desktop.
+---
 
-10. 🧪 Tests utilisateurs & retours
-	•	Tests réalisés avec 3 utilisateurs non-techniques :
-	•	Clarté de la navigation,
-	•	Temps de chargement,
-	•	Compréhension de l’interface.
-	•	Ajustements de certains contrastes et boutons.
+### 🖌️ Design UI haute fidélité
+
+- Création complète des maquettes Figma :
+  - Page d’accueil
+  - Page À propos
+  - Liste des projets
+  - Fiche projet
+  - Page de contact
+- Accessibilité : contrastes conformes WCAG AA.
+- Système de composants : boutons, cartes, titres, etc.
+
+---
+
+### ✅ Design final validé
+
+- Export des visuels optimisés (SVG, WebP...).
+- Nettoyage du design system dans Figma.
+- Préparation des assets pour intégration.
+
+---
+
+## 🧱 Développement
+
+### ⚙️ Intégration WordPress + ACF
+
+- Mise en place de :
+  - CPT “Projets”
+  - CPT “Message de contact”
+- Champs personnalisés avec **Advanced Custom Fields**.
+
+---
+
+### 🧾 Structure HTML
+
+- HTML sémantique (`<header>`, `<main>`, `<article>`, etc.)
+- Respect des niveaux de titres.
+- Méthodologie **BEM** pour nommer les classes CSS. (I mean I tried my best 😃)
+
+---
+
+### 🎨 CSS / SCSS
+
+- Architecture SCSS :
+  - `settings/` (variables, breakpoints…)
+  - `general/` (header, cards, buttons…)
+  - `content/` (accueil, projets…)
+- Layout avec **Flexbox** et **CSS Grid**.
+- Responsive design soigné (mobile, tablette, desktop).
+- Scroll horizontal natif pour certains carrousels.
+
+---
+
+### 🧪 Tests utilisateurs
+
+- 3 tests utilisateurs réalisés :
+  - Clarté de navigation
+  - Réactivité sur mobile
+  - Accessibilité visuelle
+- Résultats :
+  - ✅ Bonne lisibilité générale
+  - 🔁 Amélioration de la lisibilité des CTA
+  - 🔧 Ajustement de certains contrastes
+
+---
+
+### 📦 Déploiement
+
+- Minification du CSS, lazy loading des images.
+- Balises SEO (meta title, description, favicon...).
+- Test sur plusieurs navigateurs & tailles d’écran.
+
+---
 
 
-11. 📦 Déploiement & finalisation
-	•	Minification CSS + lazy loading des images.
-	•	Ajout d’un favicon et balises meta pour le SEO.
-  • Un peu de micro data
-	•	Test en production.
-
-⸻
-
-✅ Prochaine étape
-	•	Ajouter d'autre projets via l'admin.
-	
-
-⸻
-
-📌 Conclusion
 
 Ce projet m’a permis de pratiquer l’ensemble du processus de conception web : de l’idée jusqu’au code, en passant par l’UX, l’UI et l’intégration WordPress.
 Il me servira à présenter mon travail, mais aussi comme base pour expérimenter de nouvelles idées je l'espére, en tout cas j'ai hâte d'en apprendre plus.
