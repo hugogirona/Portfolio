@@ -3,21 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title><?= wp_title('·', false, 'right') . get_bloginfo('name') ?></title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="<?= portfolio_asset('css'); ?>">
+    <meta name="description"
+          content="<?= __hepl('Portfolio de Hugo Girona, artisan web en formation et passionné par ce qu\'il fait. Découvrez mes projets récents en création de sites web. Contactez-moi pour discuter de votre projet.') ?>">
+    <meta name="author" content="Hugo Girona">
+    <meta itemprop="name" content="Portfolio de Hugo Girona, artisan web">
+    <meta property="og:title" content="Accueil - Hugo Girona - Artisan Web">
+    <meta property="<?= __hepl('Portfolio de Hugo Girona, artisan web en formation et passionné par ce qu\'il fait. Découvrez mes projets récents en création de sites web. Contactez-moi pour discuter de votre projet.') ?>">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Hugo Girona - Artisan Web">
+    <meta name="google-site-verification" content="xJSPkd6j8Ni_10tlHjnyFwur5-obIWCLT1OeDWS_P_8" />
     <script src="<?= portfolio_asset('js') ?>" defer type="module"></script>
     <?php wp_head(); ?>
 </head>
+
 
 <?php
 $current_url = home_url(add_query_arg([], $_SERVER['REQUEST_URI']));
 ?>
 
-<body class="the_body">
+<body class="the_body" itemscope="" itemtype="https://schema.org/Person">
+
+<a href="#content" class="skip-link"><?= __hepl('Aller au contenu principal') ?></a>
 
 <div class="wrapper">
     <header class="header">
@@ -34,15 +47,22 @@ $current_url = home_url(add_query_arg([], $_SERVER['REQUEST_URI']));
         </a>
 
 
-        <nav class="nav">
+        <nav class="nav" aria-label="primary-navigation">
             <h2 class="screenreader__only"><?= __hepl('Navigation principale') ?></h2>
 
-            <input type="checkbox" id="burger-toggle" class="nav__checkbox" aria-label="<?= esc_attr(__hepl('Ouvrir le menu')) ?>"/>
-            <label for="burger-toggle" class="nav__burger" >
+            <input type="checkbox"
+                   id="burger-toggle"
+                   class="nav__checkbox"
+                   aria-label="<?= esc_attr(__hepl('Ouvrir le menu')) ?>"/>
+            <label for="burger-toggle"
+                   class="nav__burger"
+                   tabindex="0"
+                   aria-controls="nav-menu">
+                &nbsp;
                 <span class="nav__burger--line"></span>
             </label>
 
-            <ul class="nav__container">
+            <ul class="nav__container" id="nav-menu">
                 <?php foreach (get__option('navigation') as $link) : ?>
 
                     <?php $active_class = ($link['link']['url'] === $current_url) ? 'current' : ''; ?>

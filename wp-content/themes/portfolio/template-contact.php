@@ -7,8 +7,29 @@
         <aside class="info__wrapper">
             <h2 class="info__title"><?= __hepl('Coordonnées') ?></h2>
             <ul>
-                <li class="info__item"><?= get__option('company_email') ?></li>
-                <li class="info__item"><?= get__option('company_phone') ?></li>
+                <li class="info__item"><a
+                            aria-label="Envoyez un mail à cette adresse&nbsp;: <?= get__option('company_email') ?> (nouvelle fenêtre)"
+                            href="mailto:<?= get__option('company_email') ?>"
+                            itemprop="email"
+                            class="info__link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Envoyez un mail à cette adresse: <?= get__option('company_email') ?> (nouvelle fenêtre)">
+                        <?= get__option('company_email') ?>
+                    </a>
+                </li>
+                <li class="info__item"><a
+                            aria-label="Téléphoner à ce numéro de téléphone : <?= get__option('company_phone') ?> (nouvelle fenêtre)"
+                            href="tel:+32470548453"
+                            itemprop="telephone"
+                            class="info__link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Téléphoner à ce numéro de téléphone : <?= get__option('company_phone') ?>. (nouvelle fenêtre)">
+
+                        <?= get__option('company_phone') ?>
+                    </a>
+                </li>
                 <li class="info__item"><?= get__option('company_address') ?></li>
                 <li class="info__item"><?= get__option('company_postal') ?></li>
                 <li class="info__item"><?= get__option('company_country') ?></li>
@@ -18,7 +39,7 @@
 
         <section class="form__wrapper" aria-labelledby="contact-title">
 
-            <h2 class="screenreader__only"><?= __hepl('Formulaire de contact') ?></h2>
+            <h2 id="contact-title" class="screenreader__only"><?= __hepl('Formulaire de contact') ?></h2>
 
             <?php
             $errors = $_SESSION['contact_form_errors'] ?? [];
@@ -38,7 +59,7 @@
                     <legend class="screenreader__only"><?= __hepl('Informations de contact') ?></legend>
 
                     <div>
-                        <label for="fullname"><?= __hepl('Nom complet') ?><span class="ast" aria-hidden="true"> *</span></label>
+                        <label for="fullname"><?= __hepl('Nom complet') ?><abbr class="ast" aria-hidden="true"> *</abbr></label>
                         <input
                                 type="text"
                                 id="fullname"
@@ -54,7 +75,7 @@
                     </div>
 
                     <div>
-                        <label for="email"><?= __hepl('Adresse email') ?><span class="ast" aria-hidden="true"> *</span></label>
+                        <label for="email"><?= __hepl('Adresse email') ?><abbr class="ast" aria-hidden="true"> *</abbr></label>
                         <input
                                 type="email"
                                 id="email"
@@ -70,8 +91,8 @@
                     </div>
 
                     <div>
-                        <label for="subject"><?= __hepl('Sujet') ?><span class="ast"
-                                                                         aria-hidden="true"> *</span></label>
+                        <label for="subject"><?= __hepl('Sujet') ?><abbr class="ast"
+                                                                         aria-hidden="true"> *</abbr></label>
                         <input
                                 type="text"
                                 id="subject"
@@ -85,8 +106,8 @@
                     </div>
 
                     <div>
-                        <label for="message"><?= __hepl('Message') ?><span class="ast"
-                                                                           aria-hidden="true"> *</span></label>
+                        <label for="message"><?= __hepl('Message') ?><abbr class="ast"
+                                                                           aria-hidden="true"> *</abbr></label>
                         <textarea
                                 id="message"
                                 name="message"
@@ -101,8 +122,8 @@
                     <?php endif; ?>
                 </fieldset>
 
-                <p class="ast__p"><?= __hepl('Les champs marqués d’un astérisque') ?> (<span
-                            class="ast">*</span>) <?= __hepl('sont obligatoires') ?></p>
+                <p class="ast__p"><?= __hepl('Les champs marqués d’un astérisque') ?> (<abbr
+                            class="ast">*</abbr>) <?= __hepl('sont obligatoires') ?></p>
 
                 <div class="form__submit">
                     <?php wp_nonce_field('dw_contact_form_action', '_contact_nonce'); ?>

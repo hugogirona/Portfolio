@@ -43,13 +43,13 @@ get_header(); ?>
             </text>
         </svg>
 
-        <h2 class="hero__title">
+        <h2 class="hero__title"  itemprop="jobTitle">
             <i class="hero__title--first"><span><?= get_field('first_title') ?> </span></i>
             <i class="hero__title--second"><span><?= get_field('second_title') ?></span></i>
         </h2>
 
         <div class="hero__name__container">
-            <p class="hero__name"><?= get_field('my_name') ?></p>
+            <p class="hero__name" itemprop="name"><?= get_field('my_name') ?></p>
         </div>
 
         <div class="hero__quote__container">

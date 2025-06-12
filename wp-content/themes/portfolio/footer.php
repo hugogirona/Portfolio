@@ -1,13 +1,32 @@
 </main>
 <footer id="footer">
-    <nav class="footer-menu">
+    <nav class="footer-menu" aria-label="secondary-navigation">
         <h2 class="screenreader__only"><?= __hepl('Navigation secondaire') ?></h2>
         <ul class="footer-menu__container">
 
             <li class="footer-menu__title"><?= __hepl('Coordonnées') ?>
                 <ul>
-                    <li class="footer-menu__item"><?= get__option('company_email') ?></li>
-                    <li class="footer-menu__item"><?= get__option('company_phone') ?></li>
+                    <li class="footer-menu__item">
+                        <a aria-label="Envoyez un mail à cette adresse&nbsp;: <?= get__option('company_email') ?> (nouvelle fenêtre)"
+                           href="mailto:<?= get__option('company_email') ?>"
+                           itemprop="email"
+                           class="footer-menu__link"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           title="Envoyez un mail à cette adresse: <?= get__option('company_email') ?> (nouvelle fenêtre)"><?= get__option('company_email') ?></a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <a aria-label="Téléphoner à ce numéro de téléphone : <?= get__option('company_phone') ?> (nouvelle fenêtre)"
+                           href="tel:+32470548453"
+                           itemprop="telephone"
+                           class="footer-menu__link"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           title="Téléphoner à ce numéro de téléphone : <?= get__option('company_phone') ?>. (nouvelle fenêtre)">
+
+                            <?= get__option('company_phone') ?>
+                        </a>
+                    </li>
                     <li class="footer-menu__item"><?= get__option('company_address') ?></li>
                     <li class="footer-menu__item"><?= get__option('company_postal') ?></li>
                     <li class="footer-menu__item"><?= get__option('company_country') ?></li>

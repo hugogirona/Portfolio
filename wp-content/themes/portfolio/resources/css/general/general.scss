@@ -99,6 +99,7 @@ body {
             var(--Colors-Orange, rgba(242, 147, 55, 0.51)) 83.17%,
             var(--Colors-Orange-3, rgba(237, 100, 45, 0.51)) 100%);
     filter: blur(75px);
+    z-index: -1;
   }
 }
 
@@ -139,3 +140,21 @@ body {
   }
 }
 
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 1rem;
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+  transition: top 0.2s ease;
+  text-decoration: none;
+  font-weight: bold;
+
+  &:focus {
+    top: 2rem;
+    transform: translate(-50%, -50%);
+    left: 50%;
+  }
+}

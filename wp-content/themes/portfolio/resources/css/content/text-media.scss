@@ -7,6 +7,7 @@
   align-items: center;
   gap: 2rem;
   max-width: 70rem;
+  padding-bottom: 5rem;
 
   @include tablet {
     padding: 2.5rem 0 5rem;
@@ -16,12 +17,14 @@
     padding: 2.5rem 0 5rem;
   }
 
+  @include desktop {
+    margin: 0 auto 12.5rem;
+  }
+
   @include desktop-up {
     flex-direction: row;
     gap: 5rem;
     margin: 0 auto 12.5rem;
-
-
   }
 
   &__divider {

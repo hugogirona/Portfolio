@@ -24,7 +24,7 @@ $cta = get_sub_field('cta');
         <?php if($cta['cta_content'] && $cta['cta_link']) : ?>
             <a href="<?=esc_url($cta['cta_link']['url'])?>"
                title="<?=esc_attr($cta['cta_link']['title'])?>"
-               target="<?=esc_attr($cta['cta_link']['target'])?>"
+               target="<?=esc_attr($cta['cta_link']['target']? : '_self')?>"
                class="cta cta--right skills__cta"><?= esc_html($cta['cta_content'])?></a>
         <?php endif; ?>
     </div>
