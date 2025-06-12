@@ -10,7 +10,7 @@ Ce portfolio est conçu pour présenter mes compétences, mes projets et ma pers
 ---
 
 
-##🚀 Objectif du projet
+## 🚀 Objectif du projet
 
 Créer un portfolio personnel à la fois moderne, clair et responsive, en mettant en valeur mes compétences, mes projets, ainsi que ma démarche UX/UI.
 Le site est développé avec WordPress (thème sur-mesure) et utilise ACF pour la gestion de contenu flexible.
