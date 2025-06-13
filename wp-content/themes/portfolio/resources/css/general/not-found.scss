@@ -1,0 +1,66 @@
+@import "../settings/breackpoints";
+
+
+/* Style de la page 404 */
+.not-found {
+text-align: center;
+  margin-top: 3rem;
+  padding: 0 14%;
+  position: relative;
+
+  &__svg--sun {
+    position: absolute;
+    left: 12vw;
+    top: -5vw;
+    width: 15vw;
+    height: 15vw;
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 300px;
+    max-height: 300px;
+    z-index: -1;
+
+    @include desktop-up {
+      left: 12rem;
+      top: -5rem;
+    }
+
+
+    @include mobile {
+      transform: translateX(3rem) translateY(-3rem) scale(0.8);
+    }
+  }
+
+  &__title {
+    color: var(--text-primary);
+    font-size: 5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+  }
+
+  &__message {
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    opacity: .7;
+    margin-bottom: 2rem;
+  }
+
+  &__link {
+    color: var(--text-primary);
+    background-color: var(--cta-background2);
+    border: 1px solid transparent;
+    font-size: 1rem;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4rem;
+    transition: background-color 0.3s ease;
+    user-select: none;
+
+    &:active, &:hover {
+      background-color: rgba(55, 55, 55, 0.1);
+      border: 1px solid var(--text-secondary);
+      backdrop-filter: blur(20px);
+    }
+  }
+}

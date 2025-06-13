@@ -5,20 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title><?= wp_title('·', false, 'right') . get_bloginfo('name') ?></title>
+    <meta name="description"
+          content="<?= __hepl('Portfolio de Hugo Girona, artisan web en formation et passionné par ce qu\'il fait. Découvrez mes projets récents en création de sites web. Contactez-moi pour discuter de votre projet.') ?>">
+    <meta name="author" content="Hugo Girona">
+    <meta name="keywords" content="<?= __hepl('HEPL, Web Developer, Hugo Girona, Hugo, Girona, Web, portfolio, web development, artisan, SEO, Front-end, back-end, accessibility')?>">
+    <meta property="og:title" content="<?= __hepl('Accueil - Hugo Girona - Développeur Web') ?>">
+    <meta property="og:description" content="<?= __hepl('Hugo Girona - Développeur Web')?>">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="<?= __hepl('Hugo Girona - Développeur Web')?>">
+    <meta property="og:image:alt" content="<?= __hepl("Page d'accueil du portfolio de Hugo Girona")?>">
+
+    <meta name="google-site-verification" content="xJSPkd6j8Ni_10tlHjnyFwur5-obIWCLT1OeDWS_P_8" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="<?= portfolio_asset('css'); ?>">
-    <meta name="description"
-          content="<?= __hepl('Portfolio de Hugo Girona, artisan web en formation et passionné par ce qu\'il fait. Découvrez mes projets récents en création de sites web. Contactez-moi pour discuter de votre projet.') ?>">
-    <meta name="author" content="Hugo Girona">
-    <meta itemprop="name" content="Portfolio de Hugo Girona, artisan web">
-    <meta property="og:title" content="Accueil - Hugo Girona - Artisan Web">
-    <meta property="<?= __hepl('Portfolio de Hugo Girona, artisan web en formation et passionné par ce qu\'il fait. Découvrez mes projets récents en création de sites web. Contactez-moi pour discuter de votre projet.') ?>">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Hugo Girona - Artisan Web">
-    <meta name="google-site-verification" content="xJSPkd6j8Ni_10tlHjnyFwur5-obIWCLT1OeDWS_P_8" />
     <script src="<?= portfolio_asset('js') ?>" defer type="module"></script>
     <?php wp_head(); ?>
 </head>
@@ -34,9 +36,11 @@ $current_url = home_url(add_query_arg([], $_SERVER['REQUEST_URI']));
 
 <div class="wrapper">
     <header class="header">
+        <?php if (get_the_title()) : ?>
         <h1 class="screenreader__only">
             <?= get_the_title() ?>
         </h1>
+        <?php endif; ?>
 
         <div class="bg-rect-l"></div>
         <div class="bg-rect-r"></div>

@@ -89,7 +89,8 @@
       background-position: center;
       background-repeat: no-repeat;
 
-      @include mobile {}
+      @include mobile {
+      }
     }
 
     @include mobile {
@@ -125,18 +126,22 @@
 
   &__item {
 
-    color: var(--text-secondary);
+    color: var(--text-primary);
+    opacity: .7;
 
     @include tablet {
       margin-top: 3rem;
+      font-size: 1.25rem;
     }
 
     @include mobile {
       margin-top: 3rem;
-
+      font-size: 1.25rem;
     }
+
     &.current {
       color: var(--text-primary);
+      opacity: 1;
     }
   }
 
@@ -149,7 +154,7 @@
     transition: transform 0.2s ease;
     animation-fill-mode: forwards;
 
-    &.current::after{
+    &.current::after {
       content: '';
       position: absolute;
       left: 0;
@@ -162,8 +167,9 @@
     }
 
 
-    &:hover{
+    &:hover, &:active, &:focus {
       color: var(--text-primary);
+      opacity: 1;
     }
 
     &::after {

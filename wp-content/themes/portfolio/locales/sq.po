@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-06-09 18:39+0200\n"
-"PO-Revision-Date: 2025-06-09 18:40+0200\n"
+"POT-Creation-Date: 2025-06-13 16:38+0200\n"
+"PO-Revision-Date: 2025-06-13 16:38+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sq\n"
@@ -14,25 +14,21 @@ msgstr ""
 "X-Poedit-KeywordsList: __hepl\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: 404.php:4
+#: 404.php:27
 msgid "Page non trouvée"
 msgstr "Faqja nuk u gjet"
 
-#: 404.php:5
+#: 404.php:28
 msgid "Désolé, la page que vous recherchez n'existe pas ou a été déplacée."
 msgstr "Na vjen keq, faqja që po kërkoni nuk ekziston ose është zhvendosur."
 
-#: 404.php:7
-msgid "Retour à la"
-msgstr "Kthehu te"
-
-#: 404.php:8
+#: 404.php:30
 msgid "Retour à la page d'accueil"
 msgstr "Kthehu te faqja kryesore"
 
-#: 404.php:9
-msgid "page d’accueil"
-msgstr "faqja kryesore"
+#: 404.php:31
+msgid "Retour à la page d’accueil"
+msgstr "Kthehu në faqen kryesore"
 
 #: footer.php:4
 msgid "Navigation secondaire"
@@ -42,15 +38,15 @@ msgstr "Navigimi dytësor"
 msgid "Coordonnées"
 msgstr "Detajet e kontaktit"
 
-#: footer.php:17
+#: footer.php:36
 msgid "Navigation"
 msgstr "Navigimi"
 
-#: footer.php:32
+#: footer.php:51
 msgid "Ressources utiles"
 msgstr "Burime të dobishme"
 
-#: footer.php:47
+#: footer.php:66
 msgid "Suivez-moi"
 msgstr "Më ndiq"
 
@@ -78,19 +74,54 @@ msgstr "lloji-i-projektit"
 msgid "fr"
 msgstr "sq"
 
-#: header.php:31
+#: header.php:9
+msgid ""
+"Portfolio de Hugo Girona, artisan web en formation et passionné par ce qu'il "
+"fait. Découvrez mes projets récents en création de sites web. Contactez-moi "
+"pour discuter de votre projet."
+msgstr ""
+"Portofoli i Hugo Girona, një dizajner faqesh interneti në trajnim, i cili "
+"është i apasionuar pas asaj që bën. Zbuloni projektet e mia të fundit të "
+"krijimit të faqeve të internetit. Më kontaktoni për të diskutuar projektin "
+"tuaj."
+
+#: header.php:11
+msgid ""
+"HEPL, Web Developer, Hugo Girona, Hugo, Girona, Web, portfolio, web "
+"development, artisan, SEO, Front-end, back-end, accessibility"
+msgstr ""
+"HEPL, Zhvillues Uebi, Hugo Girona, Hugo, Girona, Ueb, portofol, zhvillim "
+"uebi, artizan, SEO, Front-end, backend, aksesueshmëri"
+
+#: header.php:12
+msgid "Accueil - Hugo Girona - Développeur Web"
+msgstr "Kryefaqja - Hugo Girona - Zhvillues Uebi"
+
+#: header.php:13 header.php:15
+msgid "Hugo Girona - Développeur Web"
+msgstr "Hugo Girona - Zhvillues Uebi"
+
+#: header.php:16
+msgid "Page d'accueil du portfolio de Hugo Girona"
+msgstr "Faqja kryesore e portofolit të Hugo Girona-s"
+
+#: header.php:35
+msgid "Aller au contenu principal"
+msgstr "Kapërce te përmbajtja kryesore"
+
+#: header.php:48
 msgid "Se diriger vers la page d’accueil"
 msgstr "Shko te faqja kryesore"
 
-#: header.php:38
+#: header.php:55
 msgid "Navigation principale"
 msgstr "Navigimi kryesor"
 
-#: header.php:40
+#: header.php:60
 msgid "Ouvrir le menu"
 msgstr "Hap menynë"
 
-#: header.php:86
+#: header.php:110
 msgid "Changer la langue en "
 msgstr "Ndrysho gjuhën në "
 
@@ -98,51 +129,51 @@ msgstr "Ndrysho gjuhën në "
 msgid "Quelques autres"
 msgstr "Disa të tjerë"
 
-#: template-contact.php:21
+#: template-contact.php:42
 msgid "Formulaire de contact"
 msgstr "Formulari i kontaktit"
 
-#: template-contact.php:38
+#: template-contact.php:59
 msgid "Informations de contact"
 msgstr "Informacione Kontakti"
 
-#: template-contact.php:41
+#: template-contact.php:62
 msgid "Nom complet"
 msgstr "Emri i plotë"
 
-#: template-contact.php:48
+#: template-contact.php:69
 msgid "ex: John Doe"
 msgstr "p.sh.: John Doe"
 
-#: template-contact.php:57
+#: template-contact.php:78
 msgid "Adresse email"
 msgstr "Adresa e email-it"
 
-#: template-contact.php:64
+#: template-contact.php:85
 msgid "ex: johndoe@email.com"
 msgstr "p.sh.: johndoe@email.com"
 
-#: template-contact.php:73
+#: template-contact.php:94
 msgid "Sujet"
 msgstr "Subjekti"
 
-#: template-contact.php:88
+#: template-contact.php:109
 msgid "Message"
 msgstr "Mesazh"
 
-#: template-contact.php:95
+#: template-contact.php:116
 msgid "Écrivez votre message ici..."
 msgstr "Shkruani mesazhin tuaj këtu..."
 
-#: template-contact.php:104
+#: template-contact.php:125
 msgid "Les champs marqués d’un astérisque"
 msgstr "Fushat e shënuara me një yll"
 
-#: template-contact.php:105
+#: template-contact.php:126
 msgid "sont obligatoires"
 msgstr "janë të detyrueshme"
 
-#: template-contact.php:111
+#: template-contact.php:132
 msgid "Envoyer le message"
 msgstr "Dërgo mesazhin"
 
@@ -161,6 +192,12 @@ msgstr "Drejt projektit tim "
 #: templates/content/title-paragraph/title-paragraph.php:8
 msgid "À propos"
 msgstr "Rreth"
+
+#~ msgid "Retour à la"
+#~ msgstr "Kthehu te"
+
+#~ msgid "page d’accueil"
+#~ msgstr "faqja kryesore"
 
 #~ msgid "Mes derniers projets"
 #~ msgstr "Projektet e fundit"

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-06-09 18:38+0200\n"
-"PO-Revision-Date: 2025-06-09 18:39+0200\n"
+"POT-Creation-Date: 2025-06-13 16:37+0200\n"
+"PO-Revision-Date: 2025-06-13 16:38+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_GB\n"
@@ -14,25 +14,21 @@ msgstr ""
 "X-Poedit-KeywordsList: __hepl\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: 404.php:4
+#: 404.php:27
 msgid "Page non trouvée"
 msgstr "Page not found"
 
-#: 404.php:5
+#: 404.php:28
 msgid "Désolé, la page que vous recherchez n'existe pas ou a été déplacée."
 msgstr "Sorry, the page you are looking for does not exist or has been moved."
 
-#: 404.php:7
-msgid "Retour à la"
-msgstr "Back to"
-
-#: 404.php:8
+#: 404.php:30
 msgid "Retour à la page d'accueil"
 msgstr "Back to home page"
 
-#: 404.php:9
-msgid "page d’accueil"
-msgstr "home page"
+#: 404.php:31
+msgid "Retour à la page d’accueil"
+msgstr "Back to home page"
 
 #: footer.php:4
 msgid "Navigation secondaire"
@@ -42,15 +38,15 @@ msgstr "Secondary navigation"
 msgid "Coordonnées"
 msgstr "Informations"
 
-#: footer.php:17
+#: footer.php:36
 msgid "Navigation"
 msgstr "Navigation"
 
-#: footer.php:32
+#: footer.php:51
 msgid "Ressources utiles"
 msgstr "Useful resources"
 
-#: footer.php:47
+#: footer.php:66
 msgid "Suivez-moi"
 msgstr "Follow me"
 
@@ -78,19 +74,53 @@ msgstr "project-type"
 msgid "fr"
 msgstr "en"
 
-#: header.php:31
+#: header.php:9
+msgid ""
+"Portfolio de Hugo Girona, artisan web en formation et passionné par ce qu'il "
+"fait. Découvrez mes projets récents en création de sites web. Contactez-moi "
+"pour discuter de votre projet."
+msgstr ""
+"Portfolio of Hugo Girona, web designer in training and passionate about what "
+"he does. Check out my recent web design projects. Contact me to discuss your "
+"project."
+
+#: header.php:11
+msgid ""
+"HEPL, Web Developer, Hugo Girona, Hugo, Girona, Web, portfolio, web "
+"development, artisan, SEO, Front-end, back-end, accessibility"
+msgstr ""
+"HEPL, Web Developer, Hugo Girona, Hugo, Girona, Web, portfolio, web "
+"development, artisan, SEO, Front-end, back-end, accessibility"
+
+#: header.php:12
+msgid "Accueil - Hugo Girona - Développeur Web"
+msgstr "Home - Hugo Girona - Web Developer"
+
+#: header.php:13 header.php:15
+msgid "Hugo Girona - Développeur Web"
+msgstr "Hugo Girona - Web Developer"
+
+#: header.php:16
+msgid "Page d'accueil du portfolio de Hugo Girona"
+msgstr "Home page of Hugo Girona's portfolio"
+
+#: header.php:35
+msgid "Aller au contenu principal"
+msgstr "Skip to main content"
+
+#: header.php:48
 msgid "Se diriger vers la page d’accueil"
 msgstr "Go to the home page"
 
-#: header.php:38
+#: header.php:55
 msgid "Navigation principale"
 msgstr "Primary navigation"
 
-#: header.php:40
+#: header.php:60
 msgid "Ouvrir le menu"
 msgstr "Open the menu"
 
-#: header.php:86
+#: header.php:110
 msgid "Changer la langue en "
 msgstr "Switch language to "
 
@@ -98,51 +128,51 @@ msgstr "Switch language to "
 msgid "Quelques autres"
 msgstr "Some more"
 
-#: template-contact.php:21
+#: template-contact.php:42
 msgid "Formulaire de contact"
 msgstr "Contact form"
 
-#: template-contact.php:38
+#: template-contact.php:59
 msgid "Informations de contact"
 msgstr "Contact information"
 
-#: template-contact.php:41
+#: template-contact.php:62
 msgid "Nom complet"
 msgstr "Full name"
 
-#: template-contact.php:48
+#: template-contact.php:69
 msgid "ex: John Doe"
 msgstr "ex: John Doe"
 
-#: template-contact.php:57
+#: template-contact.php:78
 msgid "Adresse email"
 msgstr "Email"
 
-#: template-contact.php:64
+#: template-contact.php:85
 msgid "ex: johndoe@email.com"
 msgstr "e.g. johndoe@email.com"
 
-#: template-contact.php:73
+#: template-contact.php:94
 msgid "Sujet"
 msgstr "Subject"
 
-#: template-contact.php:88
+#: template-contact.php:109
 msgid "Message"
 msgstr "Message"
 
-#: template-contact.php:95
+#: template-contact.php:116
 msgid "Écrivez votre message ici..."
 msgstr "Write your message here..."
 
-#: template-contact.php:104
+#: template-contact.php:125
 msgid "Les champs marqués d’un astérisque"
 msgstr "Fields marked with an asterisk"
 
-#: template-contact.php:105
+#: template-contact.php:126
 msgid "sont obligatoires"
 msgstr "are mandatory"
 
-#: template-contact.php:111
+#: template-contact.php:132
 msgid "Envoyer le message"
 msgstr "Send message"
 
@@ -160,7 +190,13 @@ msgstr "To my project "
 
 #: templates/content/title-paragraph/title-paragraph.php:8
 msgid "À propos"
-msgstr ""
+msgstr "About"
+
+#~ msgid "Retour à la"
+#~ msgstr "Back to"
+
+#~ msgid "page d’accueil"
+#~ msgstr "home page"
 
 #~ msgid "Mes derniers projets"
 #~ msgstr "My latest projects"

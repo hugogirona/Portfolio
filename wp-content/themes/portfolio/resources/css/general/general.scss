@@ -1,45 +1,12 @@
 @import "../settings/breackpoints";
 
 
-/* Style de la page 404 */
-.not-found {
-  text-align: center;
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #f9f9f9;
-
-  &__title {
-    font-family: 'Boldonse', sans-serif;
-    color: #d9534f;
-    font-size: 2em;
-  }
-
-  &__message {
-    font-size: 1.1em;
-    color: #333;
-  }
-
-  &__link {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
 html, body {
   min-height: 100%;
   position: relative;
 }
 
-.wrapper{
+.wrapper {
   max-width: 1920px;
   min-width: 320px;
   margin: 0 auto;
@@ -58,11 +25,6 @@ body {
   min-height: 100%;
   min-width: 320px;
   overflow-x: hidden;
-
-
-  @include mobile {
-    font-size: 14px;
-  }
 
   &:has(.nav__checkbox:checked) {
     overflow: hidden;
@@ -104,7 +66,7 @@ body {
 }
 
 
-#footer{
+#footer {
   position: relative;
   overflow: hidden;
 }
@@ -119,21 +81,8 @@ body {
 }
 
 .aside {
-  @include desktop-up {
-    padding: 0 6.4%;
-  }
+  padding: 0 6.4%;
 
-  @include desktop {
-    padding: 0 6.4%;
-  }
-
-  @include tablet-up {
-    padding: 0 6.4%;
-  }
-
-  @include tablet {
-    padding: 0 6.4%;
-  }
 
   @include mobile {
     padding: 0 1.25rem;
