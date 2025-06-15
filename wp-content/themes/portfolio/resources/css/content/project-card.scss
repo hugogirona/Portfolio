@@ -1,6 +1,9 @@
 @import "../settings/breackpoints";
 
 .project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
   position: relative;
   max-width: 18rem;
   min-height: 20rem;
@@ -9,8 +12,6 @@
   background: #1D1D1B;
   overflow: visible;
   transition: 0.3s ease;
-  flex-direction: column;
-  gap: 1.25rem;
   padding: 1.5625rem;
 
 
@@ -25,12 +26,15 @@
 
   &__fig{
     margin-bottom: 1rem;
+    aspect-ratio: 16/9;
+    overflow: hidden;
   }
 
   &__fig > img {
     border-radius: .3rem;
-    height: auto;
+    height: 100%;
     width: 100%;
+    object-fit: cover;
     align-self: stretch;
     transition: filter 0.3s ease;
 
@@ -88,3 +92,4 @@
     }
   }
 }
+

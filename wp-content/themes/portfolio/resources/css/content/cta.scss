@@ -12,7 +12,11 @@
   transition: background-color 0.3s ease;
   user-select: none;
 
-
+  &:active, &:hover {
+    background-color: rgba(55, 55, 55, 0.1);
+    border: 1px solid var(--text-secondary);
+    backdrop-filter: blur(20px);
+  }
 
   @include tablet-up {
     aspect-ratio: 1 / 1;
@@ -87,10 +91,6 @@
   }
 
 
-  &:active, &:hover {
-    background-color: rgba(55, 55, 55, 0.1);
-    border: 1px solid var(--text-secondary);
-    backdrop-filter: blur(20px);
-  }
+
 
 }

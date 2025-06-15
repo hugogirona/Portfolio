@@ -6,25 +6,6 @@
   justify-content: space-between;
   align-items: center;
 
-  @include desktop-up {
-
-  }
-
-  @include desktop {
-
-  }
-
-  @include tablet-up {
-
-  }
-
-  @include tablet {
-
-  }
-
-  @include mobile {
-
-  }
 
   &__container {
     display: flex;
@@ -62,8 +43,11 @@
 
     text-transform: uppercase;
     font-size: 1rem;
-    color: var(--text-secondary);
-    transition: color 0.3s ease;
+    transition: color .3s, opacity .3s ease;
+    border-radius: .5rem;
+    color: var(--text-primary);
+    opacity: .7;
+
 
     &--current {
       display: none;
@@ -71,28 +55,11 @@
 
     &:hover{
       color: var(--text-primary);
-    }
-
-
-    @include desktop-up {
-
-    }
-
-    @include desktop {
-
-    }
-
-    @include tablet-up {
-
-    }
-
-    @include tablet {
-      //margin-top: 3rem;
+      opacity: 1;
     }
 
     @include mobile {
       font-size: 1rem;
-      //margin-top: 3rem;
     }
   }
 }

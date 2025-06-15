@@ -50,11 +50,18 @@ else: ?>
                 endif;
                 ?>
             </div>
-            <?php if(get_field('cta_link') && get_field('cta_content')) :?>
-                <a href="<?=esc_url(get_field('cta_link')['url'])?>"
-                   title="<?=esc_attr(get_field('cta_link')['title'])?>"
-                   target="<?=esc_attr(get_field('cta_link')['target'])?>"
-                   class="cta cta--right projects__cta--single"><?= esc_html(get_field('cta_content'))?>
+            <?php if(get_field('cta')) :?>
+            <?php
+                $cta = get_field('cta');
+                $label = $cta['cta_content'];
+                $link = $cta['cta_link'];
+            ?>
+
+
+                <a href="<?=esc_url($link['url'])?>"
+                   title="<?=esc_attr($link['title'])?>"
+                   target="<?=esc_attr($link['target'] ? : '_self')?>"
+                   class="cta cta--right projects__cta--single"><?= esc_html($label)?>
                 </a>
             <?php endif; ?>
         </div>
