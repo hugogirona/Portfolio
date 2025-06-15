@@ -2,6 +2,8 @@
 
 📁 [Voir le projet sur Figma](https://www.figma.com/design/8twKpro9QZM5Ms1fZyMnrb/Portfolio?node-id=1-3&t=zqE60bbqhPgabRji-1)
 
+🔗 Merci de consulter [mon portfolio](https://hugogirona.com) pour voir le résultat ✨
+
 
 ⸻
 
