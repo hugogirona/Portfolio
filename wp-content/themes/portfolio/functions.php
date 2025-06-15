@@ -252,3 +252,8 @@ add_action('acf/init', 'create_site_options_page');
 
 
 add_filter('show_admin_bar', '__return_false');
+
+function my_custom_login_style() {
+    wp_enqueue_style('custom-login', get_stylesheet_directory_uri() . '/login.css');
+}
+add_action('login_enqueue_scripts', 'my_custom_login_style');

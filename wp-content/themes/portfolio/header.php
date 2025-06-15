@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title><?= wp_title('·', false, 'right') . get_bloginfo('name') ?></title>
+    <title><?= wp_get_document_title() ?></title>
     <meta name="description"
           content="<?= __hepl('Portfolio de Hugo Girona, artisan web en formation et passionné par ce qu\'il fait. Découvrez mes projets récents en création de sites web. Contactez-moi pour discuter de votre projet.') ?>">
     <meta name="author" content="Hugo Girona">

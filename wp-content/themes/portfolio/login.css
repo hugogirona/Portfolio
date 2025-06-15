@@ -1,0 +1,111 @@
+:root {
+    --background-color: #1F1F1D;
+
+    --text-primary: #D6D6D6;
+    --text-secondary: #6F6F6F;
+    --greyish: #7A7A79;
+    --orange: #F29337;
+    --oranger: #ED772F;
+    --redish: #ED642D;
+
+    --cta-background1: #2B2A26;
+    --cta-background2: #373737;
+}
+
+body.login {
+    position: relative;
+    background: #1F1F1D;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 100vh;
+        height: 100%;
+        background-image: url('/wp-content/themes/portfolio/resources/img/night_sky.jpeg');
+        background-repeat: repeat;
+        background-size: 150% 20%;
+        background-position: center;
+        opacity: 0.2;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    & h1 > a {
+        background-image: url("/wp-content/themes/portfolio/resources/img/logo.svg");
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: rgba(255, 165, 0, 0.79);
+        }
+    }
+
+}
+
+#login {
+    padding-top: 5rem;
+}
+
+#loginform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #2f2e2e;
+    border: none;
+    color: #fff;
+    border-radius: .5rem;
+    margin: 7rem auto 0;
+    overflow: visible;
+    position: relative;
+
+    &:before{
+        font-family: 'Roboto', helvetica, arial, sans-serif;
+        content: 'Bienvenue !';
+        color:  #D6D6D6;
+        font-size: 3rem;
+        position: absolute;
+        top: -5rem;
+
+    }
+}
+
+#wp-submit {
+    color: #D6D6D6;
+    background-color: #373737;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4rem;
+    transition: background-color 0.3s ease;
+    user-select: none;
+    margin-top: 1rem;
+
+
+
+    &:active, &:hover {
+        background-color: rgba(55, 55, 55, 0.1);
+        border: 1px solid var(--text-secondary);
+        backdrop-filter: blur(20px);
+    }
+}
+
+#nav, #backtoblog {
+
+    & a {
+        color: #D6D6D6;
+    }
+}
+
+#user_login, #user_pass{
+    background: transparent;
+    color: #D6D6D6;
+    padding-left: 1rem;
+}
